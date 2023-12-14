@@ -1,6 +1,13 @@
 ---
+import { Image } from 'astro:assets';
+
 import Layout from '../layouts/Layout.astro';
 import ImageCard from '../components/ImageCard.astro';
+
+// Images
+import pitbox from '../images/pitbox.svg'
+import mms from '../images/mms.png'
+import mantelgroup from '../images/mantelgroup.webp'
 
 // Icons
 import python from "../icons/python.svg";
@@ -15,7 +22,6 @@ import next from "../icons/nextdotjs.svg";
 import astro from "../icons/astro.svg";
 import alpinejs from "../icons/alpinedotjs.svg";
 import xcode from "../icons/xcode.svg";
-import { Image } from 'astro:assets';
 ---
 
 <Layout title="Lachlan's Portfolio">
@@ -60,7 +66,7 @@ import { Image } from 'astro:assets';
 			/>
 		</div>
 		<h2 class="text-5xl font-bold mt-10">The technologies I&apos;ve used</h2>
-		<div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-x-32 gap-y-16">
+		<div class="flex flex-wrap justify-center gap-8">
 			<Image alt="Google Cloud" src={gcloud} class="h-20 w-20" />
 			<Image alt="React" src={react} class="h-20 w-20" />
 			<Image alt="Node" src={node} class="h-20 w-20" />
@@ -80,21 +86,18 @@ import { Image } from 'astro:assets';
 			</div>
 		</div>
 		<h2 class="text-5xl font-bold mt-10">The places I&apos;ve worked</h2>
-		<div class="flex items-center flex-wrap gap-10">
-			<img
+		<div class="flex items-center flex-wrap justify-center gap-10">
+			<Image
 			alt="Mantel Group"
-			class="h-20"
-			src="https://www.hashicorp.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F2885%2F1654809784-mg.png&w=3840&q=75"
+			src={mantelgroup}
 			/>
-			<img
+			<Image
 			alt="pitbox.io"
-			class="h-14"
-			src="https://app.pitbox.io/static/media/pitbox-logo.4a428b2654af494c1e42.svg"
+			src={pitbox}
 			/>
-			<img
+			<Image
 			alt="Monash Motorsport"
-			class="h-10"
-			src="https://images.squarespace-cdn.com/content/v1/5e2a78aea2dc434ac475b5a4/1581301987291-8UXGFIAY2FIASSQ0NQS9/MMS+Short+BLUE.png"
+			src={mms}
 			/>
 		</div>
 	</main>
