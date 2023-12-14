@@ -1,13 +1,13 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import Layout from '../layouts/Layout.astro';
-import ImageCard from '../components/ImageCard.astro';
+import Layout from "../layouts/Layout.astro";
+import ImageCard from "../components/ImageCard.astro";
 
 // Icons
-import pitbox from '../icons/pitbox.svg'
-import mms from '../icons/mms.png'
-import mantelgroup from '../icons/mantelgroup.svg'
+import pitbox from "../icons/pitbox.svg";
+import mms from "../icons/mms.png";
+import mantelgroup from "../icons/mantelgroup.svg";
 import python from "../icons/python.svg";
 import swift from "../icons/swift.svg";
 import golang from "../icons/go.svg";
@@ -23,83 +23,71 @@ import xcode from "../icons/xcode.svg";
 ---
 
 <Layout title="Lachlan's Portfolio">
-	<main class="flex flex-col py-10 px-20 gap-10">
-		<h2 class="text-5xl font-bold">My Projects</h2>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-			<ImageCard
-			imageText="runClub"
-			secondaryText="Enhancing my local club's run timing and operations."
-			imageSrc="https://images.unsplash.com/photo-1539966903171-89770f33f468?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-			altText="group of people running"
-			/>
-			<ImageCard
-			imageText="scroom"
-			secondaryText="A scrum-based project management tool for agile teams."
-			imageSrc="https://images.unsplash.com/photo-1541960071727-c531398e7494?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-			altText="sticky notes on a window"
-			/>
-			<ImageCard
-			imageText="Does It Support"
-			secondaryText="Enabling knowledge and experience sharing amonst smart home enthusiasts."
-			imageSrc="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-			altText="internet of things devices"
-			/>
-			<ImageCard
-			imageText="cidio"
-			secondaryText="Helping higher-education students find subjects that fit them."
-			imageSrc="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2626&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-			altText="hand holding an iphone"
-			/>
-			<ImageCard
-			imageText="fit2work extractor"
-			secondaryText="Tracking police checks with web automation."
-			imageSrc="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2Vic2l0ZXxlbnwwfHwwfHx8MA%3D%3D"
-			altText="laptop with an analytical dashboard displayed"
-			/>
-			<ImageCard
-			imageText="freeCodeCamp"
-			secondaryText="A collection of mini-projects developed during my freeCodeCamp courses."
-			imageSrc="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D"
-			altText="laptop with coding applications"
-			/>
-		</div>
-		<h2 class="text-5xl font-bold mt-10">Technologies I&apos;ve used</h2>
-		<div class="flex flex-wrap gap-8">
-			<Image alt="Google Cloud" src={gcloud} class="h-20 w-20" />
-			<Image alt="React" src={react} class="h-20 w-20" />
-			<Image alt="Node" src={node} class="h-20 w-20" />
-			<Image alt="Express" src={express} class="h-20 w-20" />
-			<Image alt="Remix" src={remix} class="h-20 w-20" />
-			<Image alt="Next" src={next} class="h-20 w-20" />
-			<Image alt="Astro" src={astro} class="h-20 w-20" />
-			<Image alt="Go" src={golang} class="h-20 w-20" />
-			<Image alt="Xcode" src={xcode} class="h-20 w-20" />
-			<Image alt="Swift" src={swift} class="h-20 w-20" />
-			<Image alt="Python" src={python} class="h-20 w-20" />
-			<Image alt="Alpine" src={alpinejs} class="h-20 w-20" />
-			<div class="flex justify-center items-center h-20 w-20">
-			<span class="text-5xl">
-				htm<b>x</b>
-			</span>
-			</div>
-		</div>
-		<h2 class="text-5xl font-bold mt-10">Places I&apos;ve worked</h2>
-		<div class="flex items-center flex-wrap gap-10">
-			<Image
-			alt="Mantel Group"
-			height="80"
-			src={mantelgroup}
-			/>
-			<Image
-			alt="pitbox.io"
-			height="80"
-			src={pitbox}
-			/>
-			<Image
-			alt="Monash Motorsport"
-			height="60"
-			src={mms}
-			/>
-		</div>
-	</main>
+  <main class="flex flex-col py-10 px-20 gap-10">
+    <h2 class="text-5xl font-bold">My Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <ImageCard
+        imageText="runClub"
+        secondaryText="Enhancing my local club's run timing and operations."
+        imageSrc="https://images.unsplash.com/photo-1539966903171-89770f33f468?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        altText="group of people running"
+      />
+      <ImageCard
+        imageText="scroom"
+        secondaryText="A scrum-based project management tool for agile teams."
+        imageSrc="https://images.unsplash.com/photo-1541960071727-c531398e7494?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        altText="sticky notes on a window"
+      />
+      <ImageCard
+        imageText="Does It Support"
+        secondaryText="Enabling knowledge and experience sharing amonst smart home enthusiasts."
+        imageSrc="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        altText="internet of things devices"
+      />
+      <ImageCard
+        imageText="cidio"
+        secondaryText="Helping higher-education students find subjects that fit them."
+        imageSrc="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2626&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        altText="hand holding an iphone"
+      />
+      <ImageCard
+        imageText="fit2work extractor"
+        secondaryText="Tracking police checks with web automation."
+        imageSrc="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2Vic2l0ZXxlbnwwfHwwfHx8MA%3D%3D"
+        altText="laptop with an analytical dashboard displayed"
+      />
+      <ImageCard
+        imageText="freeCodeCamp"
+        secondaryText="A collection of mini-projects developed during my freeCodeCamp courses."
+        imageSrc="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D"
+        altText="laptop with coding applications"
+      />
+    </div>
+    <h2 class="text-5xl font-bold mt-10">Technologies I&apos;ve used</h2>
+    <div class="flex flex-wrap gap-8">
+      <Image alt="Google Cloud" src={gcloud} class="h-20 w-20" />
+      <Image alt="React" src={react} class="h-20 w-20" />
+      <Image alt="Node" src={node} class="h-20 w-20" />
+      <Image alt="Express" src={express} class="h-20 w-20" />
+      <Image alt="Remix" src={remix} class="h-20 w-20" />
+      <Image alt="Next" src={next} class="h-20 w-20" />
+      <Image alt="Astro" src={astro} class="h-20 w-20" />
+      <Image alt="Go" src={golang} class="h-20 w-20" />
+      <Image alt="Xcode" src={xcode} class="h-20 w-20" />
+      <Image alt="Swift" src={swift} class="h-20 w-20" />
+      <Image alt="Python" src={python} class="h-20 w-20" />
+      <Image alt="Alpine" src={alpinejs} class="h-20 w-20" />
+      <div class="flex justify-center items-center h-20 w-20">
+        <span class="text-5xl">
+          htm<b>x</b>
+        </span>
+      </div>
+    </div>
+    <h2 class="text-5xl font-bold mt-10">Places I&apos;ve worked</h2>
+    <div class="flex items-center flex-wrap gap-10">
+      <Image alt="Mantel Group" height="80" src={mantelgroup} />
+      <Image alt="pitbox.io" height="80" src={pitbox} />
+      <Image alt="Monash Motorsport" height="60" src={mms} />
+    </div>
+  </main>
 </Layout>

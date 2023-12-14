@@ -4,21 +4,25 @@ interface Props {
   imageSrc: string;
   imageText: string;
   secondaryText?: string;
-};
+}
 
 const { altText, imageSrc, imageText, secondaryText } = Astro.props;
 ---
 
 <div class="relative h-64 max-w-sm cursor-pointer">
-<img
-	alt={altText}
-	class="rounded-xl border-2 border-black h-full object-cover aspect-video"
-	src={imageSrc}
-/>
-<div class="absolute inset-0 bg-gray-500 hover:bg-gray-700 opacity-60 rounded-xl"></div>
-<div class="absolute inset-0 flex flex-col items-center px-8 text-center justify-center pointer-events-none">
-	<h3 class="text-white text-3xl font-bold">{imageText}</h3>
-	{secondaryText && <h4 class="text-white">{secondaryText}</h4>}
+  <img
+    alt={altText}
+    class="rounded-xl border-2 border-black h-full object-cover aspect-video"
+    src={imageSrc}
+  />
+  <div
+    class="absolute inset-0 bg-gray-500 hover:bg-gray-700 opacity-60 rounded-xl"
+  >
+  </div>
+  <div
+    class="absolute inset-0 flex flex-col items-center px-8 text-center justify-center pointer-events-none"
+  >
+    <h3 class="text-white text-3xl font-bold">{imageText}</h3>
+    {secondaryText && <h4 class="text-white">{secondaryText}</h4>}
+  </div>
 </div>
-</div>
-
