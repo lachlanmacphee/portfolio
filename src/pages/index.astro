@@ -19,85 +19,83 @@ import { Image } from 'astro:assets';
 ---
 
 <Layout title="Lachlan's Portfolio">
-	<main>
-		<div class="flex flex-col justify-center items-center py-10 px-20 gap-10">
-			<h2 class="text-5xl font-bold">My Projects</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-			  <ImageCard
-				imageText="runclub"
-				secondaryText="Enhancing my local club's run timing and operations."
-				imageSrc="https://images.unsplash.com/photo-1539966903171-89770f33f468?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-				altText="group of people running"
-			  />
-			  <ImageCard
-				imageText="scroom"
-				secondaryText="A scrum-based project management tool for agile teams."
-				imageSrc="https://images.unsplash.com/photo-1541960071727-c531398e7494?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-				altText="sticky notes on a window"
-			  />
-			  <ImageCard
-				imageText="does it support"
-				secondaryText="Enabling knowledge and experience sharing amonst smart home enthusiasts."
-				imageSrc="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-				altText="internet of things devices"
-			  />
-			  <ImageCard
-				imageText="cidio"
-				secondaryText="Helping higher-education students find subjects that fit them."
-				imageSrc="https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aXBob25lJTIwMTN8ZW58MHx8MHx8fDA%3D"
-				altText="hand holding an iphone"
-			  />
-			  <ImageCard
-				imageText="fit2work extractor"
-				secondaryText="Tracking police checks with web automation."
-				imageSrc="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2Vic2l0ZXxlbnwwfHwwfHx8MA%3D%3D"
-				altText="laptop with an analytical dashboard displayed"
-			  />
-			  <ImageCard
-				imageText="freeCodeCamp"
-				secondaryText="A collection of mini-projects developed during my freeCodeCamp courses."
-				imageSrc="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D"
-				altText="laptop with coding applications"
-			  />
+	<main class="flex flex-col justify-center items-center py-10 px-20 gap-10">
+		<h2 class="text-5xl font-bold">My Projects</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+			<ImageCard
+			imageText="runclub"
+			secondaryText="Enhancing my local club's run timing and operations."
+			imageSrc="https://images.unsplash.com/photo-1539966903171-89770f33f468?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+			altText="group of people running"
+			/>
+			<ImageCard
+			imageText="scroom"
+			secondaryText="A scrum-based project management tool for agile teams."
+			imageSrc="https://images.unsplash.com/photo-1541960071727-c531398e7494?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+			altText="sticky notes on a window"
+			/>
+			<ImageCard
+			imageText="does it support"
+			secondaryText="Enabling knowledge and experience sharing amonst smart home enthusiasts."
+			imageSrc="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+			altText="internet of things devices"
+			/>
+			<ImageCard
+			imageText="cidio"
+			secondaryText="Helping higher-education students find subjects that fit them."
+			imageSrc="https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aXBob25lJTIwMTN8ZW58MHx8MHx8fDA%3D"
+			altText="hand holding an iphone"
+			/>
+			<ImageCard
+			imageText="fit2work extractor"
+			secondaryText="Tracking police checks with web automation."
+			imageSrc="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2Vic2l0ZXxlbnwwfHwwfHx8MA%3D%3D"
+			altText="laptop with an analytical dashboard displayed"
+			/>
+			<ImageCard
+			imageText="freeCodeCamp"
+			secondaryText="A collection of mini-projects developed during my freeCodeCamp courses."
+			imageSrc="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D"
+			altText="laptop with coding applications"
+			/>
+		</div>
+		<h2 class="text-5xl font-bold mt-10">The technologies I&apos;ve used</h2>
+		<div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-x-32 gap-y-16">
+			<Image alt="Google Cloud" src={gcloud} class="h-20 w-20" />
+			<Image alt="React" src={react} class="h-20 w-20" />
+			<Image alt="Node" src={node} class="h-20 w-20" />
+			<Image alt="Express" src={express} class="h-20 w-20" />
+			<Image alt="Remix" src={remix} class="h-20 w-20" />
+			<Image alt="Next" src={next} class="h-20 w-20" />
+			<Image alt="Astro" src={astro} class="h-20 w-20" />
+			<Image alt="Go" src={golang} class="h-20 w-20" />
+			<Image alt="Xcode" src={xcode} class="h-20 w-20" />
+			<Image alt="Swift" src={swift} class="h-20 w-20" />
+			<Image alt="Python" src={python} class="h-20 w-20" />
+			<Image alt="Alpine" src={alpinejs} class="h-20 w-20" />
+			<div class="flex justify-center items-center h-20 w-20">
+			<span class="text-5xl">
+				htm<b>x</b>
+			</span>
 			</div>
-			<h2 class="text-5xl font-bold mt-10">The technologies I&apos;ve used</h2>
-			<div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-x-32 gap-y-16">
-			  <Image alt="Google Cloud" src={gcloud} class="h-20 w-20" />
-			  <Image alt="React" src={react} class="h-20 w-20" />
-			  <Image alt="Node" src={node} class="h-20 w-20" />
-			  <Image alt="Express" src={express} class="h-20 w-20" />
-			  <Image alt="Remix" src={remix} class="h-20 w-20" />
-			  <Image alt="Next" src={next} class="h-20 w-20" />
-			  <Image alt="Astro" src={astro} class="h-20 w-20" />
-			  <Image alt="Go" src={golang} class="h-20 w-20" />
-			  <Image alt="Xcode" src={xcode} class="h-20 w-20" />
-			  <Image alt="Swift" src={swift} class="h-20 w-20" />
-			  <Image alt="Python" src={python} class="h-20 w-20" />
-			  <Image alt="Alpine" src={alpinejs} class="h-20 w-20" />
-			  <div class="flex justify-center items-center h-20 w-20">
-				<span class="text-5xl">
-				  htm<b>x</b>
-				</span>
-			  </div>
-			</div>
-			<h2 class="text-5xl font-bold mt-10">The places I&apos;ve worked</h2>
-			<div class="flex items-center gap-10">
-			  <img
-				alt="Mantel Group"
-				class="h-20"
-				src="https://www.hashicorp.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F2885%2F1654809784-mg.png&w=3840&q=75"
-			  />
-			  <img
-				alt="pitbox.io"
-				class="h-14"
-				src="https://app.pitbox.io/static/media/pitbox-logo.4a428b2654af494c1e42.svg"
-			  />
-			  <img
-				alt="Monash Motorsport"
-				class="h-10"
-				src="https://images.squarespace-cdn.com/content/v1/5e2a78aea2dc434ac475b5a4/1581301987291-8UXGFIAY2FIASSQ0NQS9/MMS+Short+BLUE.png"
-			  />
-			</div>
-		  </div>
+		</div>
+		<h2 class="text-5xl font-bold mt-10">The places I&apos;ve worked</h2>
+		<div class="flex items-center gap-10">
+			<img
+			alt="Mantel Group"
+			class="h-20"
+			src="https://www.hashicorp.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F2885%2F1654809784-mg.png&w=3840&q=75"
+			/>
+			<img
+			alt="pitbox.io"
+			class="h-14"
+			src="https://app.pitbox.io/static/media/pitbox-logo.4a428b2654af494c1e42.svg"
+			/>
+			<img
+			alt="Monash Motorsport"
+			class="h-10"
+			src="https://images.squarespace-cdn.com/content/v1/5e2a78aea2dc434ac475b5a4/1581301987291-8UXGFIAY2FIASSQ0NQS9/MMS+Short+BLUE.png"
+			/>
+		</div>
 	</main>
 </Layout>
