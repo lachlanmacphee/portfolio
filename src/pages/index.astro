@@ -4,12 +4,10 @@ import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import ImageCard from '../components/ImageCard.astro';
 
-// Images
-import pitbox from '../images/pitbox.svg'
-import mms from '../images/mms.png'
-import mantelgroup from '../images/mantelgroup.webp'
-
 // Icons
+import pitbox from '../icons/pitbox.svg'
+import mms from '../icons/mms.png'
+import mantelgroup from '../icons/mantelgroup.svg'
 import python from "../icons/python.svg";
 import swift from "../icons/swift.svg";
 import golang from "../icons/go.svg";
@@ -89,14 +87,17 @@ import xcode from "../icons/xcode.svg";
 		<div class="flex items-center flex-wrap justify-center gap-10">
 			<Image
 			alt="Mantel Group"
+			height="100"
 			src={mantelgroup}
 			/>
 			<Image
 			alt="pitbox.io"
+			height="80"
 			src={pitbox}
 			/>
 			<Image
 			alt="Monash Motorsport"
+			height="60"
 			src={mms}
 			/>
 		</div>
