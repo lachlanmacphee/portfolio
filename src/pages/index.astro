@@ -4,6 +4,14 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import ImageCard from "../components/ImageCard.astro";
 
+// Images
+import peopleRunning from "../images/people-running.jpeg";
+import stickyNotes from "../images/sticky-notes.jpeg";
+import internetOfThings from "../images/internet-of-things.jpeg";
+import universityHats from "../images/university-hats.jpeg";
+import laptopAnalytics from "../images/laptop-analytics.jpeg";
+import laptopWithCode from "../images/laptop-with-code.jpeg";
+
 // Icons
 import pitbox from "../icons/pitbox.svg";
 import mms from "../icons/mms.png";
@@ -30,41 +38,41 @@ import xcode from "../icons/xcode.svg";
         imageText="Gunnies App"
         secondaryText="Enhancing my local running club's timing and operations."
         extLink="https://github.com/lachlanmacphee/gunniesapp"
-        imageSrc="https://images.unsplash.com/photo-1539966903171-89770f33f468?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imageSrc={peopleRunning}
         altText="group of people running"
       />
       <ImageCard
         imageText="scroom"
         secondaryText="A scrum-based project management tool for agile teams."
         extLink="https://github.com/lachlanmacphee/scroom"
-        imageSrc="https://images.unsplash.com/photo-1541960071727-c531398e7494?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imageSrc={stickyNotes}
         altText="sticky notes on a window"
       />
       <ImageCard
         imageText="Does It Support"
         secondaryText="Enabling knowledge and experience sharing amongst smart home enthusiasts."
         extLink="https://substack.com/search/does%20it%20support?focusedPublicationId=1878528"
-        imageSrc="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imageSrc={internetOfThings}
         altText="internet of things devices"
       />
       <ImageCard
         imageText="cidio"
         secondaryText="Helping higher-education students find subjects that fit them."
         extLink="https://github.com/lachlanmacphee/cidio/blob/main/brief.pdf"
-        imageSrc="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2626&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imageSrc={universityHats}
         altText="hand holding an iphone"
       />
       <ImageCard
         imageText="fit2work extractor"
         secondaryText="Tracking police checks with web automation."
-        imageSrc="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2Vic2l0ZXxlbnwwfHwwfHx8MA%3D%3D"
+        imageSrc={laptopAnalytics}
         altText="laptop with an analytical dashboard displayed"
       />
       <ImageCard
         imageText="freeCodeCamp"
         secondaryText="A collection of mini-projects developed during my freeCodeCamp courses."
         extLink="https://github.com/lachlanmacphee/fcc-projects"
-        imageSrc="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D"
+        imageSrc={laptopWithCode}
         altText="laptop with coding applications"
       />
     </div>
