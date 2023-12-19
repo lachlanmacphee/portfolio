@@ -18,6 +18,7 @@ const { altText, extLink, imageSrc, imageText, secondaryText } = Astro.props;
     src={imageSrc}
     width="384"
     height="256"
+    loading="eager"
   />
   <a
     class=`absolute inset-0 bg-gray-500 opacity-60 rounded-xl ${extLink && "hover:bg-gray-700"}`
