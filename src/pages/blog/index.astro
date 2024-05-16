@@ -1,0 +1,12 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const posts = await Astro.glob('./*.md');
+---
+<Layout title="Lachlan's Blog">
+    <div class="py-10 px-20">
+        <h2 class="text-5xl font-bold mb-10">Recent Posts</h2>
+        <ol>
+          {posts.map(post => <li class="list-disc"><a class="font-bold" href={post.url}>{post.frontmatter.title}</a></li>)}
+        </ol>
+    </div>
+</Layout>
