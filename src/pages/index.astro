@@ -5,6 +5,7 @@ import Layout from "../layouts/Layout.astro";
 import ImageCard from "../components/ImageCard.astro";
 
 // Images
+import circleProfile from "../images/circle-profile.png"
 import peopleRunning from "../images/people-running.jpeg";
 import stickyNotes from "../images/sticky-notes.jpeg";
 import internetOfThings from "../images/internet-of-things.jpeg";
@@ -14,7 +15,6 @@ import laptopWithCode from "../images/laptop-with-code.jpeg";
 
 // Icons
 import pitbox from "../icons/pitbox.svg";
-import mms from "../icons/mms.png";
 import mantelgroup from "../icons/mantelgroup.svg";
 import python from "../icons/python.svg";
 import swift from "../icons/swift.svg";
@@ -31,76 +31,100 @@ import xcode from "../icons/xcode.svg";
 ---
 
 <Layout title="Lachlan's Portfolio">
-  <main class="flex flex-col py-10 px-20 gap-10">
-    <h2 class="text-5xl font-bold">My Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-      <ImageCard
-        imageText="Gunnies App"
-        secondaryText="Enhancing my local running club's timing and operations."
-        extLink="https://gunnies.app"
-        imageSrc={peopleRunning}
-        altText="group of people running"
-      />
-      <ImageCard
-        imageText="scroom"
-        secondaryText="A scrum-based project management tool for agile teams."
-        extLink="https://github.com/lachlanmacphee/scroom"
-        imageSrc={stickyNotes}
-        altText="sticky notes on a window"
-      />
-      <ImageCard
-        imageText="Does It Support"
-        secondaryText="Enabling knowledge and experience sharing amongst smart home enthusiasts."
-        extLink="https://substack.com/search/does%20it%20support?focusedPublicationId=1878528"
-        imageSrc={internetOfThings}
-        altText="internet of things devices"
-      />
-      <ImageCard
-        imageText="cidio"
-        secondaryText="Helping higher-education students find subjects that fit them."
-        extLink="https://github.com/lachlanmacphee/cidio/blob/main/brief.pdf"
-        imageSrc={universityHats}
-        altText="hand holding an iphone"
-      />
-      <ImageCard
-        imageText="fit2work extractor"
-        secondaryText="Tracking police checks with web automation."
-        imageSrc={laptopAnalytics}
-        altText="laptop with an analytical dashboard displayed"
-      />
-      <ImageCard
-        imageText="freeCodeCamp"
-        secondaryText="A collection of mini-projects developed during my freeCodeCamp courses."
-        extLink="https://github.com/lachlanmacphee/fcc-projects"
-        imageSrc={laptopWithCode}
-        altText="laptop with coding applications"
-      />
-    </div>
-    <h2 class="text-5xl font-bold mt-10">Technologies I&apos;ve used</h2>
-    <div class="flex flex-wrap gap-8">
-      <Image alt="Google Cloud" src={gcloud} class="h-20 w-20" />
-      <Image alt="React" src={react} class="h-20 w-20" />
-      <Image alt="Node" src={node} class="h-20 w-20" />
-      <Image alt="Express" src={express} class="h-20 w-20" />
-      <Image alt="Remix" src={remix} class="h-20 w-20" />
-      <Image alt="Next" src={next} class="h-20 w-20" />
-      <Image alt="Astro" src={astro} class="h-20 w-20" />
-      <Image alt="Go" src={golang} class="h-20 w-20" />
-      <Image alt="Xcode" src={xcode} class="h-20 w-20" />
-      <Image alt="Swift" src={swift} class="h-20 w-20" />
-      <Image alt="Python" src={python} class="h-20 w-20" />
-      <Image alt="Alpine" src={alpinejs} class="h-20 w-20" />
-      <div class="flex justify-center items-center h-20 w-20">
-        <span class="text-5xl">
-          htm<b>x</b>
-        </span>
+  <main class="grid grid-cols-1 md:grid-cols-2 gap-16 p-10">
+    <div class="space-y-8">
+      <div class="grid grid-cols-[160px,1fr] gap-8 items-center">
+        <Image class="w-40 h-40" alt="A picture of me, Lachlan MacPhee." src={circleProfile} />
+        <div>
+          <h1 class="text-5xl font-bold mt-8 mb-1">Lachlan MacPhee</h1>
+          <h2 class="text-lg mb-8">A lover of people, community, and software.</h2>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-3xl font-bold mb-2">About Me</h3>
+        <p class="mb-4">Hey there! My name's Lachlan. I'm a {Math.abs(new Date(Date.now() - new Date('2002-12-29').getTime()).getUTCFullYear() - 1970)} year old software engineer with a mission to leave a lasting positive impact on this world through my work and relationships.</p>
+        <p class="mb-4">I have a keen eye for detail (just ask my coworkers), and like to ensure things are done once and done properly. Outside of my work life, I like to run with strangers and friends, tinker with electronics, lift weights at the gym, and meet new people. The world's a beautiful place, so I try to make the most of every moment.</p>
+        <p>If you'd like to get in touch, please <a href="mailto:contact@lachlanmacphee.com"><span class="font-extrabold underline">send me an email</span></a> or <a href="https://www.linkedin.com/in/lachlanmacphee/"><span class="font-extrabold underline">add me on LinkedIn</span></a></p>
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold mt-8 mb-4">Tools I'm competent with</h2>
+        <div class="flex flex-wrap gap-8">
+          <Image alt="Google Cloud" title="Google Cloud" src={gcloud} class="h-10 w-10" />
+          <Image alt="React.js" title="React.js" src={react} class="h-10 w-10" />
+          <Image alt="Node.js" title="Node.js" src={node} class="h-10 w-10" />
+          <Image alt="Express" title="Express" src={express} class="h-10 w-10" />
+          <Image alt="Remix" title="Remix" src={remix} class="h-10 w-10" />
+          <Image alt="Next.js" title="Next.js" src={next} class="h-10 w-10" />
+          <Image alt="Astro" title="Astro" src={astro} class="h-10 w-10" />
+          <Image alt="Go" title="Go" src={golang} class="h-10 w-10" />
+          <Image alt="Xcode" title="Xcode" src={xcode} class="h-10 w-10" />
+          <Image alt="Swift" title="Swift" src={swift} class="h-10 w-10" />
+          <Image alt="Python" title="Python" src={python} class="h-10 w-10" />
+          <Image alt="Alpine" title="Alpine" src={alpinejs} class="h-10 w-10" />
+          <div class="flex justify-center items-center h-10 w-10 cursor-default">
+            <span>
+              htm<b>x</b>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold mt-10 mb-4">Awesome orgs I've impacted</h2>
+        <div class="flex items-center flex-wrap gap-10">
+          <Image alt="Mantel Group" height="40" src={mantelgroup} />
+          <Image alt="pitbox.io" height="40" src={pitbox} />
+        </div>
       </div>
     </div>
-    <h2 class="text-5xl font-bold mt-10">Places I&apos;ve worked</h2>
-    <div class="flex items-center flex-wrap gap-10">
-      <Image alt="Mantel Group" height="80" src={mantelgroup} />
-      <Image alt="pitbox.io" height="80" src={pitbox} />
-      <Image alt="Monash Motorsport" height="60" src={mms} />
+    <div>
+      <div>
+        <h3 class="text-3xl font-bold mb-8">What I'm proud of</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 3xl:grid-cols-3 gap-5">
+          <ImageCard
+            imageText="Gunnies App"
+            secondaryText="Enhancing my local running club's timing and operations."
+            extLink="https://gunnies.app"
+            imageSrc={peopleRunning}
+            altText="group of people running"
+          />
+          <ImageCard
+            imageText="scroom"
+            secondaryText="A scrum-based project management tool for agile teams."
+            extLink="https://github.com/lachlanmacphee/scroom"
+            imageSrc={stickyNotes}
+            altText="sticky notes on a window"
+          />
+          <ImageCard
+            imageText="Does It Support"
+            secondaryText="Enabling knowledge and experience sharing amongst smart home enthusiasts."
+            extLink="https://substack.com/search/does%20it%20support?focusedPublicationId=1878528"
+            imageSrc={internetOfThings}
+            altText="internet of things devices"
+          />
+          <ImageCard
+            imageText="cidio"
+            secondaryText="Helping higher-education students find subjects that fit them."
+            extLink="https://github.com/lachlanmacphee/cidio/blob/main/brief.pdf"
+            imageSrc={universityHats}
+            altText="hand holding an iphone"
+          />
+          <ImageCard
+            imageText="fit2work extractor"
+            secondaryText="Tracking police checks with web automation."
+            imageSrc={laptopAnalytics}
+            altText="laptop with an analytical dashboard displayed"
+          />
+          <ImageCard
+            imageText="freeCodeCamp"
+            secondaryText="A collection of mini-projects developed during my freeCodeCamp courses."
+            extLink="https://github.com/lachlanmacphee/fcc-projects"
+            imageSrc={laptopWithCode}
+            altText="laptop with coding applications"
+          />
+        </div>
+      </div>
     </div>
+    
+    
   </main>
 </Layout>
