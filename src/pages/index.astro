@@ -2,20 +2,14 @@
 import { Image } from "astro:assets";
 
 import Layout from "../layouts/Layout.astro";
-import ImageCard from "../components/ImageCard.astro";
 
 // Images
 import circleProfile from "../images/circle-profile.png"
-import peopleRunning from "../images/people-running.jpeg";
-import stickyNotes from "../images/sticky-notes.jpeg";
-import internetOfThings from "../images/internet-of-things.jpeg";
-import universityHats from "../images/university-hats.jpeg";
-import laptopAnalytics from "../images/laptop-analytics.jpeg";
-import laptopWithCode from "../images/laptop-with-code.jpeg";
 
 // Icons
 import pitbox from "../icons/pitbox.svg";
 import mantelgroup from "../icons/mantelgroup.svg";
+import csiro from "../icons/csiro.svg";
 import python from "../icons/python.svg";
 import swift from "../icons/swift.svg";
 import golang from "../icons/go.svg";
@@ -28,6 +22,8 @@ import next from "../icons/nextdotjs.svg";
 import astro from "../icons/astro.svg";
 import alpinejs from "../icons/alpinedotjs.svg";
 import xcode from "../icons/xcode.svg";
+
+const posts = await Astro.glob('./blog/*.md');
 ---
 
 <Layout title="Lachlan's Portfolio">
@@ -43,7 +39,7 @@ import xcode from "../icons/xcode.svg";
       <div>
         <h3 class="text-3xl font-bold mb-2">About Me</h3>
         <p class="mb-4">Hey there! My name's Lachlan. I'm a {Math.abs(new Date(Date.now() - new Date('2002-12-29').getTime()).getUTCFullYear() - 1970)} year old software engineer with a mission to leave a lasting positive impact on this world through my work and relationships.</p>
-        <p class="mb-4">I have a keen eye for detail (just ask my coworkers), and like to ensure things are done once and done properly. Outside of my work life, I like to run with strangers and friends, tinker with electronics, lift weights at the gym, and meet new people. The world's a beautiful place, so I try to make the most of every moment.</p>
+        <p class="mb-4">I have a keen eye for detail, and like to ensure things are done once and done properly. Outside of my work life, I like to run with strangers and friends, tinker with electronics, lift weights at the gym, and meet new people. The world's a beautiful place, so I try to make the most of every moment.</p>
         <p>If you'd like to get in touch, please <a href="mailto:contact@lachlanmacphee.com"><span class="font-extrabold underline">send me an email</span></a> or <a href="https://www.linkedin.com/in/lachlanmacphee/"><span class="font-extrabold underline">add me on LinkedIn</span></a></p>
       </div>
       <div>
@@ -69,59 +65,53 @@ import xcode from "../icons/xcode.svg";
         </div>
       </div>
       <div>
-        <h2 class="text-3xl font-bold mt-10 mb-4">Awesome orgs I've impacted</h2>
+        <h2 class="text-3xl font-bold mt-10 mb-4">Orgs I've worked with</h2>
         <div class="flex items-center flex-wrap gap-10">
-          <Image alt="Mantel Group" height="40" src={mantelgroup} />
-          <Image alt="pitbox.io" height="40" src={pitbox} />
+          <Image alt="Mantel Group" height="60" src={mantelgroup} />
+          <Image alt="CSIRO" height="60" src={csiro} />
+          <Image alt="pitbox.io" height="60" src={pitbox} />
         </div>
       </div>
     </div>
     <div>
       <div>
-        <h3 class="text-3xl font-bold mb-8">What I'm proud of</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 3xl:grid-cols-3 gap-5">
-          <ImageCard
-            imageText="Gunnies App"
-            secondaryText="Enhancing my local running club's timing and operations."
-            extLink="https://gunnies.app"
-            imageSrc={peopleRunning}
-            altText="group of people running"
-          />
-          <ImageCard
-            imageText="scroom"
-            secondaryText="A scrum-based project management tool for agile teams."
-            extLink="https://github.com/lachlanmacphee/scroom"
-            imageSrc={stickyNotes}
-            altText="sticky notes on a window"
-          />
-          <ImageCard
-            imageText="Does It Support"
-            secondaryText="Enabling knowledge and experience sharing amongst smart home enthusiasts."
-            extLink="https://substack.com/search/does%20it%20support?focusedPublicationId=1878528"
-            imageSrc={internetOfThings}
-            altText="internet of things devices"
-          />
-          <ImageCard
-            imageText="cidio"
-            secondaryText="Helping higher-education students find subjects that fit them."
-            extLink="https://github.com/lachlanmacphee/cidio/blob/main/brief.pdf"
-            imageSrc={universityHats}
-            altText="hand holding an iphone"
-          />
-          <ImageCard
-            imageText="fit2work extractor"
-            secondaryText="Tracking police checks with web automation."
-            imageSrc={laptopAnalytics}
-            altText="laptop with an analytical dashboard displayed"
-          />
-          <ImageCard
-            imageText="freeCodeCamp"
-            secondaryText="A collection of mini-projects developed during my freeCodeCamp courses."
-            extLink="https://github.com/lachlanmacphee/fcc-projects"
-            imageSrc={laptopWithCode}
-            altText="laptop with coding applications"
-          />
+        <h3 class="text-3xl font-bold mb-8">Projects I'm proud of</h3>
+        <div class="grid grid-cols-1 gap-3">
+          <div>
+            <a href="https://gunnies.app"><h4 class="font-bold text-xl">Gunnies App</h4></a>
+            <p>Enhancing my local running club's timing and operations.</p>
+          </div>
+          <div>
+            <a href="https://github.com/lachlanmacphee/scroom"><h4 class="font-bold text-xl">scroom</h4></a>
+            <p>A scrum-based project management tool for agile teams.</p>
+          </div>
+          <div>
+            <a href="https://github.com/lachlanmacphee/tursim"><h4 class="font-bold text-xl">tursim</h4></a>
+            <p>A turing machine simulator written to replace Tuatara.</p>
+          </div>
+          <div>
+            <a href="https://substack.com/search/does%20it%20support?focusedPublicationId=1878528"><h4 class="font-bold text-xl">Does It Support</h4></a>
+            <p>Enabling knowledge and experience sharing amongst smart home enthusiasts.</p>
+          </div>
+          <div>
+            <a href="https://github.com/lachlanmacphee/cidio/blob/main/brief.pdf"><h4 class="font-bold text-xl">cidio</h4></a>
+            <p>Helping higher-education students find subjects that fit them.</p>
+          </div>
+          <div>
+            <h4 class="text-xl">fit2work extractor</h4>
+            <p>Tracking police checks with web automation.</p>
+          </div>
+          <div>
+            <a href="https://github.com/lachlanmacphee/fcc-projects"><h4 class="font-bold text-xl">freeCodeCamp</h4></a>
+            <p>A collection of mini-projects developed during my freeCodeCamp courses.</p>
+          </div>
         </div>
+      </div>
+      <div>
+        <h3 class="text-3xl font-bold my-8">Posts I've written recently</h3>
+        <ol class="list-none space-y-1">
+          {posts.map(post => <li><a class="font-bold" href={post.url}>{post.frontmatter.title}</a></li>)}
+        </ol>
       </div>
     </div>
     
