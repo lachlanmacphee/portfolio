@@ -29,11 +29,11 @@ const posts = await Astro.glob('./blog/*.md');
 <Layout title="Lachlan's Portfolio">
   <main class="grid grid-cols-1 md:grid-cols-2 gap-16 p-10">
     <div class="space-y-8">
-      <div class="grid grid-cols-[160px,1fr] gap-8 items-center">
-        <Image class="w-40 h-40" alt="A picture of me, Lachlan MacPhee." src={circleProfile} />
+      <div class="grid grid-cols-1 sm:grid-cols-[160px,1fr] sm:gap-8 items-center">
+        <Image class="w-40 h-40 justify-self-center sm:justify-normal" alt="A picture of me, Lachlan MacPhee." src={circleProfile} />
         <div>
-          <h1 class="text-5xl font-bold mt-8 mb-1">Lachlan MacPhee</h1>
-          <h2 class="text-lg mb-8">A lover of people, community, and software.</h2>
+          <h1 class="text-5xl text-center font-bold mt-8 mb-1">Lachlan MacPhee</h1>
+          <h2 class="text-lg text-center mb-4 sm:mb-8">Lover of people, community, and software.</h2>
         </div>
       </div>
       <div>
