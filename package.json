@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.2",
-    "@astrojs/tailwind": "^5.0.3",
-    "@astrojs/vercel": "^6.1.0",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^5.1.4",
+    "@astrojs/vercel": "^8.0.1",
     "@fontsource/titillium-web": "^5.0.18",
-    "astro": "^4.0.4",
+    "astro": "^5.1.1",
     "tailwindcss": "^3.3.6",
     "typescript": "^5.3.3"
   },
