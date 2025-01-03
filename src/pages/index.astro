@@ -22,8 +22,18 @@ import next from "../icons/nextdotjs.svg";
 import astro from "../icons/astro.svg";
 import alpinejs from "../icons/alpinedotjs.svg";
 import xcode from "../icons/xcode.svg";
+import type { MarkdownInstance } from "astro";
 
-const posts = await Astro.glob("./blog/*.md");
+interface Frontmatter {
+  title: string;
+  description?: string;
+}
+
+const posts = Object.values(
+  import.meta.glob<MarkdownInstance<Frontmatter>>("./blog/*.md", {
+    eager: true,
+  }),
+);
 ---
 
 <Layout title="Lachlan's Portfolio">
@@ -78,48 +88,83 @@ const posts = await Astro.glob("./blog/*.md");
       <div>
         <h2 class="text-3xl font-bold mt-8 mb-4">Tools I excel with</h2>
         <div class="flex flex-wrap gap-8">
-          <Image
-            alt="Google Cloud"
-            title="Google Cloud"
-            src={gcloud}
-            class="h-10 w-10"
-          />
-          <Image
-            alt="React.js"
-            title="React.js"
-            src={react}
-            class="h-10 w-10"
-          />
-          <Image alt="Node.js" title="Node.js" src={node} class="h-10 w-10" />
-          <Image
-            alt="Express"
-            title="Express"
-            src={express}
-            class="h-10 w-10"
-          />
-          <Image alt="Remix" title="Remix" src={remix} class="h-10 w-10" />
-          <Image alt="Next.js" title="Next.js" src={next} class="h-10 w-10" />
-          <Image alt="Astro" title="Astro" src={astro} class="h-10 w-10" />
-          <Image alt="Go" title="Go" src={golang} class="h-10 w-10" />
-          <Image alt="Xcode" title="Xcode" src={xcode} class="h-10 w-10" />
-          <Image alt="Swift" title="Swift" src={swift} class="h-10 w-10" />
-          <Image alt="Python" title="Python" src={python} class="h-10 w-10" />
-          <Image alt="Alpine" title="Alpine" src={alpinejs} class="h-10 w-10" />
-          <div
-            class="flex justify-center items-center h-10 w-10 cursor-default"
-          >
-            <span>
-              htm<b>x</b>
-            </span>
-          </div>
+          <a href="https://cloud.google.com/" target="_blank">
+            <Image
+              alt="Google Cloud"
+              title="Google Cloud"
+              src={gcloud}
+              class="h-10 w-10"
+            />
+          </a>
+          <a href="https://react.dev/" target="_blank">
+            <Image
+              alt="React.js"
+              title="React.js"
+              src={react}
+              class="h-10 w-10"
+            />
+          </a>
+          <a href="https://nodejs.org/" target="_blank">
+            <Image alt="Node.js" title="Node.js" src={node} class="h-10 w-10" />
+          </a>
+          <a href="https://expressjs.com/" target="_blank"
+            ><Image
+              alt="Express"
+              title="Express"
+              src={express}
+              class="h-10 w-10"
+            />
+          </a>
+          <a href="https://remix.run/" target="_blank">
+            <Image alt="Remix" title="Remix" src={remix} class="h-10 w-10" />
+          </a>
+          <a href="https://nextjs.org/" target="_blank">
+            <Image alt="Next.js" title="Next.js" src={next} class="h-10 w-10" />
+          </a>
+          <a href="https://astro.build/" target="_blank">
+            <Image alt="Astro" title="Astro" src={astro} class="h-10 w-10" />
+          </a>
+          <a href="https://go.dev/" target="_blank">
+            <Image alt="Go" title="Go" src={golang} class="h-10 w-10" />
+          </a>
+          <a href="https://developer.apple.com/xcode/" target="_blank">
+            <Image alt="Xcode" title="Xcode" src={xcode} class="h-10 w-10" />
+          </a>
+          <a href="https://developer.apple.com/swift/" target="_blank">
+            <Image alt="Swift" title="Swift" src={swift} class="h-10 w-10" />
+          </a>
+          <a href="https://python.org/" target="_blank">
+            <Image alt="Python" title="Python" src={python} class="h-10 w-10" />
+          </a>
+          <a href="https://alpinejs.dev/" target="_blank">
+            <Image
+              alt="Alpine"
+              title="Alpine"
+              src={alpinejs}
+              class="h-10 w-10"
+            />
+          </a>
+          <a href="https://htmx.org" target="_blank">
+            <div class="flex justify-center items-center h-10 w-10">
+              <span>
+                htm<b>x</b>
+              </span>
+            </div>
+          </a>
         </div>
       </div>
       <div>
         <h2 class="text-3xl font-bold mt-10 mb-4">Orgs I've worked with</h2>
         <div class="flex items-center flex-wrap gap-10">
-          <Image alt="Mantel Group" height="60" src={mantelgroup} />
-          <Image alt="CSIRO" height="60" src={csiro} />
-          <Image alt="pitbox.io" height="60" src={pitbox} />
+          <a href="https://mantelgroup.com.au" target="_blank">
+            <Image alt="Mantel Group" height="60" src={mantelgroup} />
+          </a>
+          <a href="https://csiro.au" target="_blank">
+            <Image alt="CSIRO" height="60" src={csiro} />
+          </a>
+          <a href="https://pitbox.io" target="_blank"
+            ><Image alt="pitbox.io" height="60" src={pitbox} />
+          </a>
         </div>
       </div>
     </div>
