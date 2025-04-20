@@ -5,10 +5,13 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title="Lachlan's Blog">
-  <div class="flex justify-center py-10 px-4">
+  <div
+    class="flex justify-center py-10 px-4 prose-code:before:content-none prose-code:after:content-none"
+  >
     <Prose>
       <h1>{frontmatter.title}</h1>
       <p>{frontmatter.description}</p>
+      <strong>Published {frontmatter.date} (ISO 8601)</strong>
       <slot />
     </Prose>
   </div>

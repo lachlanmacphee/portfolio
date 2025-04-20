@@ -1,7 +1,9 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
+date: "2023-11-23"
 title: "Lossless Compression"
 description: "Let's dive deep into the history of Huffman Codings and how we can use them in combination with Ukkonen's Algorithm and Elias Omega Coding to minimise the data we send over-the-wire."
+status: "draft"
 ---
 
 ## History

@@ -26,7 +26,9 @@ import type { MarkdownInstance } from "astro";
 
 interface Frontmatter {
   title: string;
-  description?: string;
+  description: string;
+  date: string;
+  status: string;
 }
 
 const posts = Object.values(
@@ -70,9 +72,9 @@ const posts = Object.values(
         </p>
         <p class="mb-4">
           I have a keen eye for detail and like to ensure things are done once
-          and done properly. Outside of my work life, I run/cycle/swim with
-          strangers and friends, tinker with electronics, work on my passion
-          projects, and enjoy meeting new people.
+          and done properly. Outside of my work life, I love meeting new people
+          who share similar passions to my own, like competing in triathlons,
+          tinkering with electronics, and working on passion projects.
         </p>
         <p>
           If you'd like to get in touch, please <a
@@ -170,7 +172,7 @@ const posts = Object.values(
     </div>
     <div>
       <div>
-        <h3 class="text-3xl font-bold mb-8">Projects I'm proud of</h3>
+        <h3 class="text-3xl font-bold mb-4">Projects I'm proud of</h3>
         <div class="grid grid-cols-1 gap-3">
           <div>
             <a href="https://gunnies.app"
@@ -189,16 +191,6 @@ const posts = Object.values(
               ><h4 class="font-bold text-xl">tursim</h4></a
             >
             <p>A turing machine simulator written to replace Tuatara.</p>
-          </div>
-          <div>
-            <a
-              href="https://substack.com/search/does%20it%20support?focusedPublicationId=1878528"
-              ><h4 class="font-bold text-xl">Does It Support</h4></a
-            >
-            <p>
-              Enabling knowledge and experience sharing amongst smart home
-              enthusiasts.
-            </p>
           </div>
           <div>
             <a
@@ -223,16 +215,21 @@ const posts = Object.values(
         </div>
       </div>
       <div>
-        <h3 class="text-3xl font-bold my-8">Posts I've written recently</h3>
+        <h3 class="text-3xl font-bold mt-8 mb-4">
+          Posts I've written recently
+        </h3>
         <ol class="list-none space-y-1">
           {
-            posts.map((post) => (
-              <li>
-                <a class="font-bold" href={post.url}>
-                  {post.frontmatter.title}
-                </a>
-              </li>
-            ))
+            posts
+              .filter((post) => post.frontmatter.status == "published")
+              .reverse()
+              .map((post) => (
+                <li>
+                  <a class="font-bold" href={post.url}>
+                    {post.frontmatter.title}
+                  </a>
+                </li>
+              ))
           }
         </ol>
       </div>
