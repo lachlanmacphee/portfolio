@@ -34,7 +34,7 @@ interface Frontmatter {
 const posts = Object.values(
   import.meta.glob<MarkdownInstance<Frontmatter>>("./blog/*.md", {
     eager: true,
-  }),
+  })
 );
 ---
 
@@ -64,8 +64,8 @@ const posts = Object.values(
           Hey there! My name's Lachlan. I'm a {
             Math.abs(
               new Date(
-                Date.now() - new Date("2002-12-29").getTime(),
-              ).getUTCFullYear() - 1970,
+                Date.now() - new Date("2002-12-29").getTime()
+              ).getUTCFullYear() - 1970
             )
           } year old software engineer with a mission to leave a lasting
           positive impact on this world through my work and relationships.
@@ -175,8 +175,8 @@ const posts = Object.values(
         <h3 class="text-3xl font-bold mb-4">Projects I'm proud of</h3>
         <div class="grid grid-cols-1 gap-3">
           <div>
-            <a href="https://gunnies.app"
-              ><h4 class="font-bold text-xl">gunnies</h4></a
+            <a href="https://github.com/lachlanmacphee/runclub"
+              ><h4 class="font-bold text-xl">runclub</h4></a
             >
             <p>Enhancing my local running club's timing and operations.</p>
           </div>
