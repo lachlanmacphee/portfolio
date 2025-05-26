@@ -10,7 +10,7 @@ status: "published"
 
 I recently ventured to my grandparents' house for a weekend stay. Oftentimes, they prepare a list of technology-related-things that I can help them with while I'm there. Being the "techie" in the family often gets you into this debacle! Though, it's a pretty good deal considering that I'm **very** well fed in exchange.
 
-On this occassion, one of the things that my grandpa needed help with was re-connecting his hearing aids to their living room television. This way, my grandma wouldn't yell at him for having the volume too loud to compensate for the fact the audio was no longer playing directly in his ear. I fixed it up pretty quickly by clicking the pair button at the back of the Unitron TV Connector if anyone else ever has to solve this...
+On this occasion, one of the things that my grandpa needed help with was re-connecting his hearing aids to their living room television. This way, my grandma wouldn't yell at him for having the volume too loud to compensate for the fact the audio was no longer playing directly in his ear. I fixed it up pretty quickly by clicking the pair button at the back of the Unitron TV Connector if anyone else ever has to solve this...
 
 While my grandpa's pretty neat, his memory isn't the greatest, so he keeps his instruction booklets in a place that will be intuitive to find if he ever runs into an issue. In this case, after I had finished fixing the issue for him, he put the instructions for the TV Connector back in the entertainment centre below the television.
 
