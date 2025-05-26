@@ -1,0 +1,241 @@
+---
+import { Image } from "astro:assets";
+
+import Layout from "../layouts/Layout.astro";
+
+// Images
+import circleProfile from "../images/circle-profile.png";
+
+// Icons
+import pitbox from "../icons/pitbox.svg";
+import mantelgroup from "../icons/mantelgroup.svg";
+import csiro from "../icons/csiro.svg";
+import python from "../icons/python.svg";
+import swift from "../icons/swift.svg";
+import golang from "../icons/go.svg";
+import gcloud from "../icons/googlecloud.svg";
+import react from "../icons/react.svg";
+import node from "../icons/nodedotjs.svg";
+import express from "../icons/express.svg";
+import remix from "../icons/remix.svg";
+import next from "../icons/nextdotjs.svg";
+import astro from "../icons/astro.svg";
+import alpinejs from "../icons/alpinedotjs.svg";
+import xcode from "../icons/xcode.svg";
+import type { MarkdownInstance } from "astro";
+
+interface Frontmatter {
+  title: string;
+  description: string;
+  date: string;
+  status: string;
+}
+
+const posts = Object.values(
+  import.meta.glob<MarkdownInstance<Frontmatter>>("./blog/*.md", {
+    eager: true,
+  })
+);
+---
+
+<Layout title="Lachlan's Portfolio">
+  <main class="grid grid-cols-1 md:grid-cols-2 gap-16 p-10">
+    <div class="space-y-8">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-[160px,1fr] sm:gap-8 items-center"
+      >
+        <Image
+          class="w-40 h-40 justify-self-center sm:justify-normal"
+          alt="A picture of me, Lachlan MacPhee."
+          src={circleProfile}
+        />
+        <div>
+          <h1 class="text-5xl text-center sm:text-left font-bold mt-8 mb-1">
+            Lachlan MacPhee
+          </h1>
+          <h2 class="text-lg text-center sm:text-left mb-4 sm:mb-8">
+            Lover of people, community, and software.
+          </h2>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-3xl font-bold mb-2">About Me</h3>
+        <p class="mb-4">
+          Hey there! My name's Lachlan. I'm a software engineer with a mission
+          to leave a lasting positive impact on this world through my work and
+          relationships.
+        </p>
+        <p class="mb-4">
+          I have a keen eye for detail and like to ensure things are done once
+          and done properly. Outside of my work life, I love meeting new people
+          who share similar passions to my own, like competing in triathlons,
+          tinkering with electronics, and working on passion projects.
+        </p>
+        <p>
+          If you'd like to get in touch, please <a
+            href="mailto:contact@lachlanmacphee.com"
+            ><span class="font-extrabold underline">send me an email</span></a
+          > or <a href="https://www.linkedin.com/in/lachlanmacphee/"
+            ><span class="font-extrabold underline"
+              >connect with me on LinkedIn</span
+            ></a
+          >
+        </p>
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold mt-8 mb-4">Tools I excel with</h2>
+        <div class="flex flex-wrap gap-8">
+          <a href="https://cloud.google.com/" target="_blank">
+            <Image
+              alt="Google Cloud"
+              title="Google Cloud"
+              src={gcloud}
+              class="h-10 w-10"
+            />
+          </a>
+          <a href="https://react.dev/" target="_blank">
+            <Image
+              alt="React.js"
+              title="React.js"
+              src={react}
+              class="h-10 w-10"
+            />
+          </a>
+          <a href="https://nodejs.org/" target="_blank">
+            <Image alt="Node.js" title="Node.js" src={node} class="h-10 w-10" />
+          </a>
+          <a href="https://expressjs.com/" target="_blank"
+            ><Image
+              alt="Express"
+              title="Express"
+              src={express}
+              class="h-10 w-10"
+            />
+          </a>
+          <a href="https://remix.run/" target="_blank">
+            <Image alt="Remix" title="Remix" src={remix} class="h-10 w-10" />
+          </a>
+          <a href="https://nextjs.org/" target="_blank">
+            <Image alt="Next.js" title="Next.js" src={next} class="h-10 w-10" />
+          </a>
+          <a href="https://astro.build/" target="_blank">
+            <Image alt="Astro" title="Astro" src={astro} class="h-10 w-10" />
+          </a>
+          <a href="https://go.dev/" target="_blank">
+            <Image alt="Go" title="Go" src={golang} class="h-10 w-10" />
+          </a>
+          <a href="https://developer.apple.com/xcode/" target="_blank">
+            <Image alt="Xcode" title="Xcode" src={xcode} class="h-10 w-10" />
+          </a>
+          <a href="https://developer.apple.com/swift/" target="_blank">
+            <Image alt="Swift" title="Swift" src={swift} class="h-10 w-10" />
+          </a>
+          <a href="https://python.org/" target="_blank">
+            <Image alt="Python" title="Python" src={python} class="h-10 w-10" />
+          </a>
+          <a href="https://alpinejs.dev/" target="_blank">
+            <Image
+              alt="Alpine"
+              title="Alpine"
+              src={alpinejs}
+              class="h-10 w-10"
+            />
+          </a>
+          <a href="https://htmx.org" target="_blank">
+            <div class="flex justify-center items-center h-10 w-10">
+              <span>
+                htm<b>x</b>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold mt-10 mb-4">Orgs I've worked with</h2>
+        <div class="flex items-center flex-wrap gap-10">
+          <a href="https://mantelgroup.com.au" target="_blank">
+            <Image alt="Mantel Group" height="60" src={mantelgroup} />
+          </a>
+          <a href="https://csiro.au" target="_blank">
+            <Image alt="CSIRO" height="60" src={csiro} />
+          </a>
+          <a href="https://pitbox.io" target="_blank"
+            ><Image alt="pitbox.io" height="60" src={pitbox} />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h3 class="text-3xl font-bold mb-4">Projects I'm proud of</h3>
+        <div class="grid grid-cols-1 gap-3">
+          <div>
+            <a href="https://github.com/lachlanmacphee/runclub"
+              ><h4 class="font-bold text-xl">runclub</h4></a
+            >
+            <p>Enhancing my local running club's timing and operations.</p>
+          </div>
+          <div>
+            <a href="https://github.com/lachlanmacphee/scroom"
+              ><h4 class="font-bold text-xl">scroom</h4></a
+            >
+            <p>A scrum-based project management tool for agile teams.</p>
+          </div>
+          <div>
+            <a href="https://tursim.lachlanmacphee.com"
+              ><h4 class="font-bold text-xl">tursim</h4></a
+            >
+            <p>A turing machine simulator written to replace Tuatara.</p>
+          </div>
+          <div>
+            <a href="https://tbh.lachlanmacphee.com"
+              ><h4 class="font-bold text-xl">the better handbook</h4></a
+            >
+            <p>
+              An open-source handbook and independent unit reviewing platform.
+            </p>
+          </div>
+          <div>
+            <a
+              href="https://github.com/lachlanmacphee/cidio/blob/main/brief.pdf"
+              ><h4 class="font-bold text-xl">cidio</h4></a
+            >
+            <p>Helping university students find subjects that fit them.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-xl">fit2work extractor</h4>
+            <p>Tracking police checks with web automation.</p>
+          </div>
+          <div>
+            <a href="https://github.com/lachlanmacphee/fcc-projects"
+              ><h4 class="font-bold text-xl">freeCodeCamp</h4></a
+            >
+            <p>
+              A collection of mini-projects developed during my freeCodeCamp
+              courses.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-3xl font-bold mt-8 mb-4">
+          Posts I've written recently
+        </h3>
+        <ol class="list-none space-y-1">
+          {
+            posts
+              .filter((post) => post.frontmatter.status == "published")
+              .reverse()
+              .map((post) => (
+                <li>
+                  <a class="font-bold" href={post.url}>
+                    {post.frontmatter.title}
+                  </a>
+                </li>
+              ))
+          }
+        </ol>
+      </div>
+    </div>
+  </main>
+</Layout>
