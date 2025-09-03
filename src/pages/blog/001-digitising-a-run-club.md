@@ -1,12 +1,12 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
 date: "2025-04-20"
-title: "From Clipboards to Clicks: Digitising a Run Club"
+title: "Digitising a Run Club from 2003"
 description: "I transformed a running club from pen and paper to a realtime online experience with Pocketbase."
 status: "published"
 ---
 
-Since 2003, Gunn Runners South Melbourne, affectionately known as "Gunnies", has hosted a run on pretty much every Tuesday night of the year. Somewhere between 2003 and 2023, Gunnies decided to start keeping track of people's times with a clipboard, a pen, and a printed sheet. As runners registered, names were matched to bib numbers. Then, the real challenge began at the finish line – with volunteers frantically scribbling down times as runners crossed, often in groups, hoping to get them all down on the sheet in order. It was slow, prone to errors, and incredibly stressful, especially during summer when we saw 50+ runners coming along.
+Since 2003, Gunn Runners South Melbourne, affectionately known as "Gunnies", has hosted a run on pretty much every Tuesday night of the year. Somewhere between 2003 and 2023, Gunnies decided to start keeping track of people's times with a clipboard, a pen, and a printed sheet. As runners registered, names were matched to bib numbers. The challenge began at the finish line – with volunteers frantically scribbling down times as runners crossed, often in groups, hoping to get them all down on the sheet in order. It was slow, prone to errors, and incredibly stressful, especially during summer when we saw 50+ runners coming along.
 
 To me, Gunn Runners is more than just a run club; it's a community. We meet weekly at the Limerick Arms Hotel for a timed 3.5km or 5km run, welcoming runners of all abilities. The $5 run fee supports the club and the charities that we choose to donate to. But our 20-year-old paper timekeeping system was becoming a bottleneck. Transcribing results into our WordPress database was tedious, historical data was hard to reach, and managing waivers was a separate manual process.
 

@@ -11,15 +11,16 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/tailwind": "^5.1.4",
+    "@astrojs/tailwind": "^6.0.2",
     "@fontsource/titillium-web": "^5.0.18",
-    "astro": "^5.1.1",
+    "astro": "^5.13.5",
     "tailwindcss": "^3.3.6",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",
     "prettier": "^3.1.1",
-    "prettier-plugin-astro": "^0.12.2"
+    "prettier-plugin-astro": "^0.12.2",
+    "prettier-plugin-tailwindcss": "^0.6.14"
   }
 }

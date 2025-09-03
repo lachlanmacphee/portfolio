@@ -34,43 +34,42 @@ interface Frontmatter {
 const posts = Object.values(
   import.meta.glob<MarkdownInstance<Frontmatter>>("./blog/*.md", {
     eager: true,
-  })
+  }),
 );
 ---
 
 <Layout title="Lachlan's Portfolio">
-  <main class="grid grid-cols-1 md:grid-cols-2 gap-16 p-10">
-    <div class="space-y-8">
+  <main class="grid h-full grid-cols-1 md:grid-cols-2">
+    <div class="h-full space-y-8 px-4 pt-8 md:border-r-gray-300 lg:p-10">
       <div
-        class="grid grid-cols-1 sm:grid-cols-[160px,1fr] sm:gap-8 items-center"
+        class="grid grid-cols-1 items-center sm:grid-cols-[160px,1fr] sm:gap-8"
       >
         <Image
-          class="w-40 h-40 justify-self-center sm:justify-normal"
+          class="h-40 w-40 justify-self-center sm:justify-normal"
           alt="A picture of me, Lachlan MacPhee."
           src={circleProfile}
         />
         <div>
-          <h1 class="text-5xl text-center sm:text-left font-bold mt-8 mb-1">
+          <h1 class="mb-1 mt-8 text-center text-5xl font-bold sm:text-left">
             Lachlan MacPhee
           </h1>
-          <h2 class="text-lg text-center sm:text-left mb-4 sm:mb-8">
-            Lover of people, community, and software.
+          <h2 class="mb-4 text-center text-lg sm:mb-8 sm:text-left">
+            I'm a problem solver with a passion for people.
           </h2>
         </div>
       </div>
       <div>
-        <h3 class="text-3xl font-bold mb-2">About Me</h3>
+        <h3 class="mb-2 text-3xl font-bold">About Me</h3>
         <p class="mb-4">
-          Hey there! My name's Lachlan. I'm a software engineer with a mission
-          to leave a lasting positive impact on this world through my work and
-          relationships.
+          Hey there! My name's Lachlan. I'm on a mission to leave a lasting
+          positive impact on this world through my work and relationships.
         </p>
         <p class="mb-4">
           I have a keen eye for detail and like to ensure things are done once
           and done properly. Outside of my work life, I love meeting new people,
           especially those who share similar passions to my own. Some of these
-          include competing in triathlons, running long distance, tinkering with
-          electronics, and working on passion projects.
+          passions include competing in triathlons, tinkering with electronics,
+          cooking a mean curry, and working on passion projects.
         </p>
         <p>
           If you'd like to get in touch, please <a
@@ -84,7 +83,7 @@ const posts = Object.values(
         </p>
       </div>
       <div>
-        <h2 class="text-3xl font-bold mt-8 mb-4">Tools I excel with</h2>
+        <h2 class="mb-4 mt-8 text-3xl font-bold">Tools I excel with</h2>
         <div class="flex flex-wrap gap-8">
           <a href="https://cloud.google.com/" target="_blank">
             <Image
@@ -143,7 +142,7 @@ const posts = Object.values(
             />
           </a>
           <a href="https://htmx.org" target="_blank">
-            <div class="flex justify-center items-center h-10 w-10">
+            <div class="flex h-10 w-10 items-center justify-center">
               <span>
                 htm<b>x</b>
               </span>
@@ -152,8 +151,8 @@ const posts = Object.values(
         </div>
       </div>
       <div>
-        <h2 class="text-3xl font-bold mt-10 mb-4">Orgs I've worked with</h2>
-        <div class="flex items-center flex-wrap gap-10">
+        <h2 class="mb-4 mt-10 text-3xl font-bold">Orgs I've worked with</h2>
+        <div class="flex flex-wrap items-center gap-10">
           <a href="https://mantelgroup.com.au" target="_blank">
             <Image alt="Mantel Group" height="60" src={mantelgroup} />
           </a>
@@ -166,31 +165,31 @@ const posts = Object.values(
         </div>
       </div>
     </div>
-    <div>
+    <div class="px-4 pb-8 md:px-8 lg:p-10">
       <div>
-        <h3 class="text-3xl font-bold mb-4">Projects I'm proud of</h3>
+        <h3 class="mb-4 text-3xl font-bold">Projects I'm proud of</h3>
         <div class="grid grid-cols-1 gap-3">
           <div>
             <a href="https://github.com/lachlanmacphee/runclub"
-              ><h4 class="font-bold text-xl">runclub</h4></a
+              ><h4 class="text-xl font-bold">runclub</h4></a
             >
             <p>Enhancing my local running club's timing and operations.</p>
           </div>
           <div>
             <a href="https://github.com/lachlanmacphee/scroom"
-              ><h4 class="font-bold text-xl">scroom</h4></a
+              ><h4 class="text-xl font-bold">scroom</h4></a
             >
             <p>A scrum-based project management tool for agile teams.</p>
           </div>
           <div>
             <a href="https://tursim.lachlanmacphee.com"
-              ><h4 class="font-bold text-xl">tursim</h4></a
+              ><h4 class="text-xl font-bold">tursim</h4></a
             >
             <p>A turing machine simulator written to replace Tuatara.</p>
           </div>
           <div>
             <a href="https://tbh.lachlanmacphee.com"
-              ><h4 class="font-bold text-xl">the better handbook</h4></a
+              ><h4 class="text-xl font-bold">the better handbook</h4></a
             >
             <p>
               An open-source handbook and independent unit reviewing platform.
@@ -199,27 +198,14 @@ const posts = Object.values(
           <div>
             <a
               href="https://github.com/lachlanmacphee/cidio/blob/main/brief.pdf"
-              ><h4 class="font-bold text-xl">cidio</h4></a
+              ><h4 class="text-xl font-bold">cidio</h4></a
             >
             <p>Helping university students find subjects that fit them.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-xl">fit2work extractor</h4>
-            <p>Tracking police checks with web automation.</p>
-          </div>
-          <div>
-            <a href="https://github.com/lachlanmacphee/fcc-projects"
-              ><h4 class="font-bold text-xl">freeCodeCamp</h4></a
-            >
-            <p>
-              A collection of mini-projects developed during my freeCodeCamp
-              courses.
-            </p>
           </div>
         </div>
       </div>
       <div>
-        <h3 class="text-3xl font-bold mt-8 mb-4">
+        <h3 class="mb-4 mt-8 text-3xl font-bold">
           Posts I've written recently
         </h3>
         <ol class="list-none space-y-1">

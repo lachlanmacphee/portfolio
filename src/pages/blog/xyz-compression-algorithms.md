@@ -8,7 +8,7 @@ status: "draft"
 
 ## History
 
-I recall laughing when I found out that David A. Huffman created Huffman Codings after his professor, Robert M. Fano, offered his MIT class two options:
+I laughed out loud when I found out that David A. Huffman created Huffman Codings after his professor, Robert M. Fano, offered his MIT class two options:
 
 1. Take a final exam.
 2. Prove that an existing binary code was as efficient as possible, or come up with a better one.

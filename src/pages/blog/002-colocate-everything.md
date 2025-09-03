@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
 date: "2025-05-26"
-title: "The Beauty of Colocating"
+title: "Colocate Everything"
 description: "Keep relevant things close together. It will save you time later."
 status: "published"
 ---
