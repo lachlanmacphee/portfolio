@@ -40,20 +40,18 @@ const posts = Object.values(
 
 <Layout title="Lachlan's Portfolio">
   <main class="grid h-full grid-cols-1 md:grid-cols-2">
-    <div class="h-full space-y-8 px-4 pt-8 md:border-r-gray-300 lg:p-10">
+    <div class="h-full space-y-8 p-4 md:px-8 md:py-10">
       <div
         class="grid grid-cols-1 items-center sm:grid-cols-[160px,1fr] sm:gap-8"
       >
         <Image
-          class="h-40 w-40 justify-self-center sm:justify-normal"
+          class="w-40 justify-self-center sm:justify-normal"
           alt="A picture of me, Lachlan MacPhee."
           src={circleProfile}
         />
-        <div>
-          <h1 class="mb-1 mt-8 text-center text-5xl font-bold sm:text-left">
-            Lachlan MacPhee
-          </h1>
-          <h2 class="mb-4 text-center text-lg sm:mb-8 sm:text-left">
+        <div class="space-y-1 text-center sm:text-left">
+          <h1 class="text-5xl font-bold">Lachlan MacPhee</h1>
+          <h2 class="mb-4 text-lg sm:mb-8">
             I'm a problem solver with a passion for people.
           </h2>
         </div>
@@ -69,7 +67,7 @@ const posts = Object.values(
           and done properly. Outside of my work life, I love meeting new people,
           especially those who share similar passions to my own. Some of these
           passions include competing in triathlons, tinkering with electronics,
-          cooking a mean curry, and working on passion projects.
+          cooking healthy meals, and working on passion projects.
         </p>
         <p>
           If you'd like to get in touch, please <a
@@ -165,7 +163,7 @@ const posts = Object.values(
         </div>
       </div>
     </div>
-    <div class="px-4 pb-8 md:px-8 lg:p-10">
+    <div class="h-full p-4 md:px-8 md:py-10">
       <div>
         <h3 class="mb-4 text-3xl font-bold">Projects I'm proud of</h3>
         <div class="grid grid-cols-1 gap-3">
