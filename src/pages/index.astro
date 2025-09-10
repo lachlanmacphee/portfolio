@@ -1,28 +1,11 @@
 ---
 import { Image } from "astro:assets";
+import type { MarkdownInstance } from "astro";
 
 import Layout from "../layouts/Layout.astro";
 
 // Images
 import circleProfile from "../images/circle-profile.png";
-
-// Icons
-import pitbox from "../icons/pitbox.svg";
-import mantelgroup from "../icons/mantelgroup.svg";
-import csiro from "../icons/csiro.svg";
-import python from "../icons/python.svg";
-import swift from "../icons/swift.svg";
-import golang from "../icons/go.svg";
-import gcloud from "../icons/googlecloud.svg";
-import react from "../icons/react.svg";
-import node from "../icons/nodedotjs.svg";
-import express from "../icons/express.svg";
-import remix from "../icons/remix.svg";
-import next from "../icons/nextdotjs.svg";
-import astro from "../icons/astro.svg";
-import alpinejs from "../icons/alpinedotjs.svg";
-import xcode from "../icons/xcode.svg";
-import type { MarkdownInstance } from "astro";
 
 interface Frontmatter {
   title: string;
@@ -65,9 +48,8 @@ const posts = Object.values(
         <p class="mb-4">
           I have a keen eye for detail and like to ensure things are done once
           and done properly. Outside of my work life, I love meeting new people,
-          especially those who share similar passions to my own. Some of these
-          passions include competing in triathlons, tinkering with electronics,
-          cooking healthy meals, and working on passion projects.
+          competing in triathlons, tinkering with electronics, cooking healthy
+          meals, and working on passion projects.
         </p>
         <p>
           If you'd like to get in touch, please <a
@@ -81,131 +63,7 @@ const posts = Object.values(
         </p>
       </div>
       <div>
-        <h2 class="mb-4 mt-8 text-3xl font-bold">Tools I excel with</h2>
-        <div class="flex flex-wrap gap-8">
-          <a href="https://cloud.google.com/" target="_blank">
-            <Image
-              alt="Google Cloud"
-              title="Google Cloud"
-              src={gcloud}
-              class="h-10 w-10"
-            />
-          </a>
-          <a href="https://react.dev/" target="_blank">
-            <Image
-              alt="React.js"
-              title="React.js"
-              src={react}
-              class="h-10 w-10"
-            />
-          </a>
-          <a href="https://nodejs.org/" target="_blank">
-            <Image alt="Node.js" title="Node.js" src={node} class="h-10 w-10" />
-          </a>
-          <a href="https://expressjs.com/" target="_blank"
-            ><Image
-              alt="Express"
-              title="Express"
-              src={express}
-              class="h-10 w-10"
-            />
-          </a>
-          <a href="https://remix.run/" target="_blank">
-            <Image alt="Remix" title="Remix" src={remix} class="h-10 w-10" />
-          </a>
-          <a href="https://nextjs.org/" target="_blank">
-            <Image alt="Next.js" title="Next.js" src={next} class="h-10 w-10" />
-          </a>
-          <a href="https://astro.build/" target="_blank">
-            <Image alt="Astro" title="Astro" src={astro} class="h-10 w-10" />
-          </a>
-          <a href="https://go.dev/" target="_blank">
-            <Image alt="Go" title="Go" src={golang} class="h-10 w-10" />
-          </a>
-          <a href="https://developer.apple.com/xcode/" target="_blank">
-            <Image alt="Xcode" title="Xcode" src={xcode} class="h-10 w-10" />
-          </a>
-          <a href="https://developer.apple.com/swift/" target="_blank">
-            <Image alt="Swift" title="Swift" src={swift} class="h-10 w-10" />
-          </a>
-          <a href="https://python.org/" target="_blank">
-            <Image alt="Python" title="Python" src={python} class="h-10 w-10" />
-          </a>
-          <a href="https://alpinejs.dev/" target="_blank">
-            <Image
-              alt="Alpine"
-              title="Alpine"
-              src={alpinejs}
-              class="h-10 w-10"
-            />
-          </a>
-          <a href="https://htmx.org" target="_blank">
-            <div class="flex h-10 w-10 items-center justify-center">
-              <span>
-                htm<b>x</b>
-              </span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div>
-        <h2 class="mb-4 mt-10 text-3xl font-bold">Orgs I've worked with</h2>
-        <div class="flex flex-wrap items-center gap-10">
-          <a href="https://mantelgroup.com.au" target="_blank">
-            <Image alt="Mantel Group" height="60" src={mantelgroup} />
-          </a>
-          <a href="https://csiro.au" target="_blank">
-            <Image alt="CSIRO" height="60" src={csiro} />
-          </a>
-          <a href="https://pitbox.io" target="_blank"
-            ><Image alt="pitbox.io" height="60" src={pitbox} />
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="h-full p-4 md:px-8 md:py-10">
-      <div>
-        <h3 class="mb-4 text-3xl font-bold">Projects I'm proud of</h3>
-        <div class="grid grid-cols-1 gap-3">
-          <div>
-            <a href="https://github.com/lachlanmacphee/runclub"
-              ><h4 class="text-xl font-bold">runclub</h4></a
-            >
-            <p>Enhancing my local running club's timing and operations.</p>
-          </div>
-          <div>
-            <a href="https://github.com/lachlanmacphee/scroom"
-              ><h4 class="text-xl font-bold">scroom</h4></a
-            >
-            <p>A scrum-based project management tool for agile teams.</p>
-          </div>
-          <div>
-            <a href="https://tursim.lachlanmacphee.com"
-              ><h4 class="text-xl font-bold">tursim</h4></a
-            >
-            <p>A turing machine simulator written to replace Tuatara.</p>
-          </div>
-          <div>
-            <a href="https://tbh.lachlanmacphee.com"
-              ><h4 class="text-xl font-bold">the better handbook</h4></a
-            >
-            <p>
-              An open-source handbook and independent unit reviewing platform.
-            </p>
-          </div>
-          <div>
-            <a
-              href="https://github.com/lachlanmacphee/cidio/blob/main/brief.pdf"
-              ><h4 class="text-xl font-bold">cidio</h4></a
-            >
-            <p>Helping university students find subjects that fit them.</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h3 class="mb-4 mt-8 text-3xl font-bold">
-          Posts I've written recently
-        </h3>
+        <h3 class="mb-4 mt-8 text-3xl font-bold">Blog Posts</h3>
         <ol class="list-none space-y-1">
           {
             posts
@@ -213,13 +71,73 @@ const posts = Object.values(
               .reverse()
               .map((post) => (
                 <li>
-                  <a class="font-bold" href={post.url}>
-                    {post.frontmatter.title}
+                  <a class="font-bold underline" href={post.url}>
+                    {post.frontmatter.date}: {post.frontmatter.title}
                   </a>
                 </li>
               ))
           }
         </ol>
+      </div>
+    </div>
+    <div class="h-full p-4 md:px-8 md:py-10">
+      <div class="max-w-lg">
+        <h3 class="mb-4 text-3xl font-bold">Projects</h3>
+        <div class="grid grid-cols-1 gap-3">
+          <div>
+            <a href="https://github.com/eddiroot/eddi"
+              ><h4 class="text-xl font-bold underline">eddi</h4></a
+            >
+            <p>
+              My pride and joy. A software project I'm working on with uni
+              friends to reimagine how schools teach and organise.
+            </p>
+          </div>
+          <div>
+            <a href="https://github.com/lachlanmacphee/runclub"
+              ><h4 class="text-xl font-bold underline">runclub</h4></a
+            >
+            <p>Enhancing my local running club's timing and operations.</p>
+          </div>
+          <div>
+            <a href="https://tursim.lachlanmacphee.com"
+              ><h4 class="text-xl font-bold underline">tursim</h4></a
+            >
+            <p>A turing machine simulator written to replace Tuatara.</p>
+          </div>
+          <div>
+            <a href="https://tbh.lachlanmacphee.com"
+              ><h4 class="text-xl font-bold underline">
+                the better handbook
+              </h4></a
+            >
+            <p>
+              An open-source handbook and review platform for Monash University.
+            </p>
+          </div>
+          <div>
+            <a href="https://github.com/lachlanmacphee/launtsched"
+              ><h4 class="text-xl font-bold underline">launtsched</h4></a
+            >
+            <p>
+              Change settings of your Launtel service/s through the command
+              line.
+            </p>
+          </div>
+          <div>
+            <a href="https://github.com/lachlanmacphee/scroom"
+              ><h4 class="text-xl font-bold underline">scroom</h4></a
+            >
+            <p>A scrum-based project management tool for agile teams.</p>
+          </div>
+          <div>
+            <a
+              href="https://github.com/lachlanmacphee/cidio/blob/main/brief.pdf"
+              ><h4 class="text-xl font-bold underline">cidio</h4></a
+            >
+            <p>Helping university students find subjects that fit them.</p>
+          </div>
+        </div>
       </div>
     </div>
   </main>

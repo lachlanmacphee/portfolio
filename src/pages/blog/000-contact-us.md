@@ -23,7 +23,7 @@ I decided to opt for the latter, as it allows us to keep a record of all of the 
 
 We first need to create a new collection (basically a table), I called mine `contact_us_submissions` and gave it the following schema:
 
-```
+```javascript
 "id": uuid
 "firstName": string
 "lastName": string
@@ -35,7 +35,7 @@ We first need to create a new collection (basically a table), I called mine `con
 
 I then added the following function in my `pb_hooks` folder:
 
-```
+```javascript
 onRecordAfterCreateRequest((e) => {
   const message = new MailerMessage({
     from: {
@@ -53,21 +53,21 @@ onRecordAfterCreateRequest((e) => {
 
 Now every time someone submitted the form, it would store it in the database and send us an email copy! Here is the React code for the email submission:
 
-```
+```javascript
 async function onSubmit(values) {
-    await pb.collection("contact_us_submissions").create({
-      firstName: values.firstName,
-      lastName: values.lastName,
-      emailAddress: values.emailAddress,
-      phoneNumber: values.phoneNumber,
-      subject: values.subject,
-      comments: values.comments,
-    });
-    toast({
-      title: "Form Submitted!",
-      description: "We'll get back to you as soon as we can.",
-    });
-  }
+  await pb.collection("contact_us_submissions").create({
+    firstName: values.firstName,
+    lastName: values.lastName,
+    emailAddress: values.emailAddress,
+    phoneNumber: values.phoneNumber,
+    subject: values.subject,
+    comments: values.comments,
+  });
+  toast({
+    title: "Form Submitted!",
+    description: "We'll get back to you as soon as we can.",
+  });
+}
 ```
 
 Hope that helps someone out there!
