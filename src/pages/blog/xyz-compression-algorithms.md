@@ -8,12 +8,12 @@ status: "draft"
 
 ## History
 
-I laughed out loud when I found out that David A. Huffman created Huffman Codings after his professor, Robert M. Fano, offered his MIT class two options:
+Supposedly David A. Huffman created Huffman Codings after his professor, Robert M. Fano, offered his MIT class two options:
 
 1. Take a final exam.
 2. Prove that an existing binary code was as efficient as possible, or come up with a better one.
 
-Instead of just studying for the exam like most normal students, Huffman tried to prove that an existing algorithm was already as efficient as possible, without any luck. So he switched gears and tried to find something better.
+Instead of just studying for the exam like most normal students, Huffman tried to prove that an existing algorithm was already as efficient as possible. After not having any luck, he switched gears and tried to find something better.
 
 What he discovered was that it was more efficient to go bottom-up when creating the tree for an encoding, rather than top-down, and thus Huffman Codings were born. [Source](https://en.wikipedia.org/wiki/Huffman_coding)
 
