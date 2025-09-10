@@ -17,7 +17,7 @@ status: "published"
 When it comes to hosting software, you generally have three options:
 
 1. **Self-Hosting**: You can host software on your own server or a virtual private server (VPS). This gives you full control over the environment and data, but requires some level of technical knowledge to set up and maintain.
-2. **Cloud Hosting**: You can use cloud providers like AWS, Google Cloud, or DigitalOcean. This option offers scalability and reliability, but often incurs a much higher ongoing costs, and can leave you with a hefty bill if not setup correctly.
+2. **Cloud Hosting**: You can use cloud providers like AWS, Google Cloud, or Azure. This option offers scalability and reliability, but often incurs much higher ongoing costs and can leave you with a hefty bill if not setup correctly.
 3. **Managed Hosting**: Providers like Frappe offer managed hosting services for their software, where they take care of the setup, maintenance, and updates for you. This is a good option if you want to avoid the technical aspects of hosting, but it can be expensive and may limit your control over the software.
 
 ## Recommended Approach
