@@ -50,21 +50,30 @@ Assuming you're on the page I linked in the last section, we can now create our 
 - **Improved Metrics**: Optional, but can be useful for monitoring your server's performance. If it's free, I recommend enabling it.
 - **Hostname**: Choose something relevant to your business, e.g. `mybusiness-erp`.
 
-Once you've made these selections, click the "Create Droplet" button at the bottom of the page. It will take a few minutes for your droplet to be created. Once it's ready, you will see it listed on your DigitalOcean dashboard. Click on the icon that looks like a terminal. This will open a web-based terminal that you can use to interact with your VPS. You should see a prompt asking for your username. The default username for Ubuntu is `root`. Enter that and press Enter. Next, it will ask for your password. Enter the password you set during the droplet creation process (note that you won't see any characters appear as you type). Press Enter again.
+Once you've made these selections, click the "Create Droplet" button at the bottom of the page. It will take a few minutes for your droplet to be created. Once it's ready, you will see it listed on your DigitalOcean dashboard. Click on the icon that looks like a terminal. This will open a web-based terminal that you can use to interact with your VPS. You should see a prompt asking for your username. The default username for Ubuntu is `root`. Enter that and press Enter. Next, it will ask for your password. Enter the password you set during the droplet creation process (note that you won't see any characters appear as you type). Press Enter again. Leave that tab open, as we will be using it in a future section.
+
+## VPS - Domain Name
+
+Next, we need to point your domain name to the ERP. This is important as it allows you to access your ERP through a friendly URL instead of an IP address. If you don't have a domain name yet, you can purchase one from providers like [Namecheap](https://www.namecheap.com/). Once you have a domain name, you need to setup an A record from `erp` to your VPS's IP address. You can find your VPS's IP address on the DigitalOcean dashboard where your droplet is listed. This means you will be able to access your ERP at `erp.your_domain.com`.
 
 ## VPS - ERPNext
 
-Now that you have access to your VPS, we can start setting up ERPNext. This is as simple as copy pasting all of the commands at once from the code block below into the terminal and then hitting enter.
+Jump back to the web terminal tab you opened earlier. Now we can start setting up the software on the VPS.
+
+Start off by typing `echo $DOMAIN="supermarket.com"` (replace `supermarket.com` with your actual domain name) and press Enter. This sets up a variable that we will use in the next commands.
+
+You can confirm it is set correctly by typing `echo $DOMAIN` and pressing Enter. It should print out your domain name.
+
+Now, you can copy and paste all of the commands below into the terminal and press Enter. This will install Docker, set up a firewall, configure Caddy as a reverse proxy with automatic HTTPS, and finally install ERPNext using Docker.
 
 ```bash
-# Add Docker's official GPG key:
+# Add Docker's official GPG key and install Docker
 sudo apt-get update
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-# Add the repository to Apt sources:
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
@@ -73,12 +82,35 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
+# Enable the firewall and setup Caddy
+ufw enable
+sudo ufw allow 80
+sudo ufw allow 443
+
+# Install Caddy
+sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
+sudo apt update
+sudo apt install caddy
+
+# Create Caddy configuration for your domain
+sudo tee /etc/caddy/Caddyfile > /dev/null <<EOF
+erp.$DOMAIN {
+    reverse_proxy localhost:8080
+}
+EOF
+
+# Start and enable Caddy
+sudo systemctl enable caddy
+sudo systemctl start caddy
+
 git clone https://github.com/frappe/frappe_docker
 cd frappe_docker
 docker compose -f pwd.yml up -d
 ```
 
-This will take a while to run, as it needs to download and set up a lot of software. Once it's done, you should see a message saying "Creating site...". This means the ERP has been successfully installed on your VPS. You can now [move to the next step](https://lachlanmacphee.com/blog/005-erpnext-setup).
+This will take a while to run, as it needs to download and set up a lot of software. Give it about 5-10 minutes, and if there are no errors, [move to the next step](https://lachlanmacphee.com/blog/005-erpnext-setup).
 
 ## Appendix (optional reading)
 
