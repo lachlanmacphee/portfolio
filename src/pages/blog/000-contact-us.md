@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 date: "2023-11-23"
 title: "Pocketbase Contact Forms"
-description: "This tutorial will guide you through how to develop a simple contact us form in React and have that submit a request to a support email while persisting the request on the database for future analysis."
+description: "Develop a simple contact form in React and persist the request with Pocketbase as a backend."
 status: "published"
 ---
 

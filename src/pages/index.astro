@@ -22,23 +22,22 @@ const posts = Object.values(
 ---
 
 <Layout title="Lachlan MacPhee">
-  <main class="grid h-full grid-cols-1 md:grid-cols-2">
-    <div class="h-full space-y-8 p-4 md:px-8 md:py-10">
-      <div
-        class="grid grid-cols-1 items-center sm:grid-cols-[160px,1fr] sm:gap-8"
-      >
+  <main class="flex justify-center p-6 md:p-8">
+    <div class="h-full max-w-2xl space-y-8">
+      <div class="grid grid-cols-1 items-center">
         <Image
-          class="w-40 justify-self-center sm:justify-normal"
+          class="w-40 justify-self-center"
           alt="A picture of me, Lachlan MacPhee."
           src={circleProfile}
         />
-        <div class="space-y-1 text-center sm:text-left">
+        <div class="space-y-1 text-center">
           <h1 class="text-5xl font-bold">Lachlan MacPhee</h1>
-          <h2 class="mb-4 text-lg sm:mb-8">
-            I'm a problem solver with a passion for people.
+          <h2 class="mb-4 text-lg">
+            A problem solver with a passion for people.
           </h2>
         </div>
       </div>
+      <!-- About Me -->
       <div>
         <h3 class="mb-2 text-3xl font-bold">About Me</h3>
         <p class="mb-4">
@@ -62,82 +61,164 @@ const posts = Object.values(
           >
         </p>
       </div>
+      <!-- Blog Posts -->
       <div>
         <h3 class="mb-4 mt-8 text-3xl font-bold">Blog Posts</h3>
-        <ol class="list-none space-y-1">
-          {
-            posts
-              .filter((post) => post.frontmatter.status == "published")
-              .reverse()
-              .map((post) => (
-                <li>
-                  <a class="font-bold underline" href={post.url}>
-                    {post.frontmatter.date}: {post.frontmatter.title}
-                  </a>
-                </li>
-              ))
-          }
-        </ol>
+        <table class="w-full">
+          <caption class="sr-only">List of blog posts</caption>
+          <colgroup>
+            <col />
+            <col class="w-32" />
+          </colgroup>
+          <thead class="sr-only">
+            <tr>
+              <th scope="col">Title & Description</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              posts
+                .filter((post) => post.frontmatter.status == "published")
+                .reverse()
+                .map((post) => (
+                  <tr class="border border-black">
+                    <td class="border-r border-black p-2">
+                      <a
+                        class="text-lg font-semibold underline"
+                        href={post.url}
+                      >
+                        {post.frontmatter.title}
+                      </a>
+                      <p class="text-sm">{post.frontmatter.description}</p>
+                    </td>
+                    <td class="text-center">{post.frontmatter.date}</td>
+                  </tr>
+                ))
+            }
+          </tbody>
+        </table>
       </div>
-    </div>
-    <div class="h-full p-4 md:px-8 md:py-10">
-      <div class="max-w-lg">
+      <!-- Projects -->
+      <div>
         <h3 class="mb-4 text-3xl font-bold">Projects</h3>
-        <div class="grid grid-cols-1 gap-3">
-          <div>
-            <a href="https://github.com/eddiroot/eddi"
-              ><h4 class="text-xl font-bold underline">eddi</h4></a
-            >
-            <p>
-              My pride and joy. A software project I'm working on with uni
-              friends to reimagine how schools teach and organise.
-            </p>
-          </div>
-          <div>
-            <a href="https://github.com/lachlanmacphee/runclub"
-              ><h4 class="text-xl font-bold underline">runclub</h4></a
-            >
-            <p>Enhancing my local running club's timing and operations.</p>
-          </div>
-          <div>
-            <a href="https://tursim.lachlanmacphee.com"
-              ><h4 class="text-xl font-bold underline">tursim</h4></a
-            >
-            <p>A turing machine simulator written to replace Tuatara.</p>
-          </div>
-          <div>
-            <a href="https://tbh.lachlanmacphee.com"
-              ><h4 class="text-xl font-bold underline">
-                the better handbook
-              </h4></a
-            >
-            <p>
-              An open-source handbook and review platform for Monash University.
-            </p>
-          </div>
-          <div>
-            <a href="https://github.com/lachlanmacphee/launtsched"
-              ><h4 class="text-xl font-bold underline">launtsched</h4></a
-            >
-            <p>
-              Change settings of your Launtel service/s through the command
-              line.
-            </p>
-          </div>
-          <div>
-            <a href="https://github.com/lachlanmacphee/scroom"
-              ><h4 class="text-xl font-bold underline">scroom</h4></a
-            >
-            <p>A scrum-based project management tool for agile teams.</p>
-          </div>
-          <div>
-            <a
-              href="https://github.com/lachlanmacphee/cidio/blob/main/brief.pdf"
-              ><h4 class="text-xl font-bold underline">cidio</h4></a
-            >
-            <p>Helping university students find subjects that fit them.</p>
-          </div>
-        </div>
+        <table class="w-full">
+          <caption class="sr-only">List of projects</caption>
+          <colgroup>
+            <col />
+            <col class="w-32" />
+          </colgroup>
+          <thead class="sr-only">
+            <tr>
+              <th scope="col">Project & Description</th>
+              <th scope="col">Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border border-black">
+              <td class="border-r border-black p-2">
+                <span class="text-lg font-semibold">eddi</span>
+                <p class="text-sm">
+                  A software project I'm working on with uni friends to
+                  reimagine schooling.
+                </p>
+              </td>
+              <td class="text-center">
+                <a
+                  class="font-bold underline"
+                  href="https://github.com/eddiroot/eddi">GitHub</a
+                >
+              </td>
+            </tr>
+            <tr class="border border-black">
+              <td class="border-r border-black p-2">
+                <span class="text-lg font-semibold">runclub</span>
+                <p class="text-sm">
+                  Enhancing my local running club's timing and operations.
+                </p>
+              </td>
+              <td class="text-center">
+                <a
+                  class="font-bold underline"
+                  href="https://github.com/lachlanmacphee/runclub">GitHub</a
+                >
+              </td>
+            </tr>
+            <tr class="border border-black">
+              <td class="border-r border-black p-2">
+                <span class="text-lg font-semibold">tursim</span>
+                <p class="text-sm">
+                  A turing machine simulator written to replace Tuatara.
+                </p>
+              </td>
+              <td class="text-center">
+                <a
+                  class="font-bold underline"
+                  href="https://tursim.lachlanmacphee.com">Website</a
+                >
+              </td>
+            </tr>
+            <tr class="border border-black">
+              <td class="border-r border-black p-2">
+                <span class="text-lg font-semibold">the better handbook</span>
+                <p class="text-sm">
+                  An open-source handbook and review platform for Monash
+                  University.
+                </p>
+              </td>
+              <td class="text-center">
+                <a
+                  class="font-bold underline"
+                  href="https://tbh.lachlanmacphee.com">Website</a
+                >
+              </td>
+            </tr>
+            <tr class="border border-black">
+              <td class="border-r border-black p-2">
+                <span class="text-lg font-semibold">launtsched</span>
+                <p class="text-sm">
+                  Change settings of your Launtel service/s through the command
+                  line.
+                </p>
+              </td>
+              <td class="text-center">
+                <a
+                  class="font-bold underline"
+                  href="https://github.com/lachlanmacphee/launtsched">GitHub</a
+                >
+              </td>
+            </tr>
+            <tr class="border border-black">
+              <td class="border-r border-black p-2">
+                <span class="text-lg font-semibold">scroom</span>
+                <p class="text-sm">
+                  A scrum-based project management tool for agile teams.
+                </p>
+              </td>
+              <td class="text-center">
+                <a
+                  class="font-bold underline"
+                  href="https://github.com/lachlanmacphee/scroom">GitHub</a
+                >
+              </td>
+            </tr>
+            <tr class="border border-black">
+              <td class="border-r border-black p-2">
+                <span class="text-lg font-semibold">cidio</span>
+                <p class="text-sm">
+                  Helping university students find subjects that fit them.
+                </p>
+              </td>
+              <td class="text-center">
+                <a
+                  class="font-bold underline"
+                  href="https://github.com/lachlanmacphee/cidio/blob/main/brief.pdf"
+                  >Brief</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </main>
