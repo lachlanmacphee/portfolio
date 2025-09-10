@@ -42,4 +42,4 @@ Here's a rough outline of how I intend to structure this series, hopefully it gi
 
 ## Sound good?
 
-If you're ready to take control of your business' ERP, let's get started! Click [here](https://lachlanmacphee.com/blog/003-erpnext-hosting) to move to the next step.
+If you're ready to take control of your business' ERP, let's get started! Click [here](https://lachlanmacphee.com/blog/004-erpnext-hosting) to move to the next step.

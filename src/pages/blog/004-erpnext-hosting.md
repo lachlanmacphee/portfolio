@@ -78,7 +78,7 @@ cd frappe_docker
 docker compose -f pwd.yml up -d
 ```
 
-This will take a while to run, as it needs to download and set up a lot of software. Once it's done, you should see a message saying "Creating site...". This means the ERP has been successfully installed on your VPS. You can now [move to the next step](https://lachlanmacphee.com/blog/003-erpnext-setup).
+This will take a while to run, as it needs to download and set up a lot of software. Once it's done, you should see a message saying "Creating site...". This means the ERP has been successfully installed on your VPS. You can now [move to the next step](https://lachlanmacphee.com/blog/005-erpnext-setup).
 
 ## Appendix (optional reading)
 
