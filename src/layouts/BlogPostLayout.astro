@@ -6,11 +6,11 @@ const { frontmatter } = Astro.props;
 <Layout title="Lachlan's Blog">
   <div class="flex justify-center p-6 md:p-8">
     <div
-      class="prose w-full max-w-2xl prose-h1:text-3xl prose-h1:font-bold prose-p:text-justify prose-a:text-blue-600 prose-code:before:content-none prose-code:after:content-none prose-img:rounded-xl"
+      class="prose w-full max-w-2xl prose-h1:text-3xl prose-h1:font-bold prose-p:text-justify prose-a:text-blue-600 prose-strong:text-red-600 prose-code:before:content-none prose-code:after:content-none prose-img:rounded-xl"
     >
       <h1>{frontmatter.title}</h1>
-      <p>{frontmatter.description}</p>
-      <strong>Published {frontmatter.date}</strong>
+      <p class="text-lg font-extrabold">{frontmatter.description}</p>
+      <p class="italic">Published {frontmatter.date}</p>
       <slot />
     </div>
   </div>
