@@ -17,7 +17,7 @@ interface Frontmatter {
 const posts = Object.values(
   import.meta.glob<MarkdownInstance<Frontmatter>>("./blog/*.md", {
     eager: true,
-  }),
+  })
 );
 ---
 
@@ -47,8 +47,8 @@ const posts = Object.values(
         <p class="mb-4">
           I have a keen eye for detail and like to ensure things are done once
           and done properly. Outside of my work life, I love meeting new people,
-          competing in triathlons, tinkering with electronics, cooking healthy
-          meals, and working on passion projects.
+          running long distances, having a crack at triathlons, tinkering with
+          electronics, cooking healthy meals, and working on passion projects.
         </p>
         <p>
           If you'd like to get in touch, please <a

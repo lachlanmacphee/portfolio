@@ -36,4 +36,4 @@ Head to `https://erp.yourcompany.com/app/user` and click the `Add User` button i
 
 ![The ERPNext add user page](../../images/erpnext-setup-add-user.png)
 
-That's all for this blog post! In the next one, we'll dive into the accounting module and see how to track where your money is coming from and going to. Click [here](https://lachlanmacphee.com/blog/006-erpnext-accounting) to move to the next step.
+That's all for this blog post! In the next one, we'll dive into setting up the items that your company buys and sells. Click [here](https://lachlanmacphee.com/blog/006-erpnext-items) to move to the next step.
