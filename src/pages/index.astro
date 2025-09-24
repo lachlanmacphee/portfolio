@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 
 // Images
-import circleProfile from "../images/circle-profile.png";
+import ProfilePic from "../images/profile.jpeg";
 
 interface Frontmatter {
   title: string;
@@ -25,18 +25,20 @@ const posts = Object.values(
   <main class="flex justify-center p-6 md:p-8">
     <div class="h-full max-w-2xl space-y-8">
       <!-- Picture and Headline -->
-      <div class="grid grid-cols-1 items-center">
+      <div
+        class="grid grid-cols-1 items-center rounded-2xl bg-[#f4e7d8] p-4 sm:bg-transparent"
+      >
         <Image
-          class="h-40 w-40 justify-self-center"
+          class="h-40 w-40 justify-self-center rounded-full"
           width={160}
           height={160}
           alt="A picture of me, Lachlan MacPhee."
-          src={circleProfile}
+          src={ProfilePic}
         />
-        <div class="mt-4 space-y-1 text-center">
-          <h1 class="text-5xl font-bold">Lachlan MacPhee</h1>
-          <h2 class="mb-4 text-lg">
-            A problem solver with a passion for people.
+        <div class="mt-4 flex flex-col items-center text-center">
+          <h1 class="text-4xl font-bold sm:text-5xl">Lachlan MacPhee</h1>
+          <h2 class="mt-2 max-w-72 text-lg sm:max-w-none">
+            I'm a problem solver with a passion for people.
           </h2>
         </div>
       </div>
