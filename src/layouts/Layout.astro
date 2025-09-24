@@ -1,5 +1,5 @@
 ---
-import "@fontsource/libre-franklin";
+import "../styles/global.css";
 
 interface Props {
   title: string;
@@ -12,13 +12,13 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Lachlan MacPhee's Personal Website" />
+    <meta name="description" content="Lachlan MacPhee's Website" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="h-screen bg-[#f6eee3] font-primary">
+  <body class="font-primary h-screen bg-[#f6eee3]">
     <slot />
   </body>
 </html>

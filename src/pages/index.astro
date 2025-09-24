@@ -24,6 +24,7 @@ const posts = Object.values(
 <Layout title="Lachlan MacPhee">
   <main class="flex justify-center p-6 md:p-8">
     <div class="h-full max-w-2xl space-y-8">
+      <!-- Picture and Headline -->
       <div class="grid grid-cols-1 items-center">
         <Image
           class="h-40 w-40 justify-self-center"
@@ -65,7 +66,7 @@ const posts = Object.values(
       </div>
       <!-- Blog Posts -->
       <div>
-        <h3 class="mb-4 mt-8 text-3xl font-bold">Blog Posts</h3>
+        <h3 class="mt-8 mb-4 text-3xl font-bold">Blog Posts</h3>
         <table class="w-full">
           <caption class="sr-only">List of blog posts</caption>
           <colgroup>
@@ -84,8 +85,8 @@ const posts = Object.values(
                 .filter((post) => post.frontmatter.status == "published")
                 .reverse()
                 .map((post) => (
-                  <tr class="border border-black">
-                    <td class="border-r border-black p-2">
+                  <tr>
+                    <td class="p-2">
                       <a
                         class="text-lg font-semibold underline"
                         href={post.url}
@@ -117,8 +118,8 @@ const posts = Object.values(
             </tr>
           </thead>
           <tbody>
-            <tr class="border border-black">
-              <td class="border-r border-black p-2">
+            <tr>
+              <td class="p-2">
                 <span class="text-lg font-semibold">eddi</span>
                 <p class="text-sm">
                   A software project I'm working on with uni friends to
@@ -132,8 +133,8 @@ const posts = Object.values(
                 >
               </td>
             </tr>
-            <tr class="border border-black">
-              <td class="border-r border-black p-2">
+            <tr>
+              <td class="p-2">
                 <span class="text-lg font-semibold">runclub</span>
                 <p class="text-sm">
                   Enhancing my local running club's timing and operations.
@@ -146,8 +147,8 @@ const posts = Object.values(
                 >
               </td>
             </tr>
-            <tr class="border border-black">
-              <td class="border-r border-black p-2">
+            <tr>
+              <td class="p-2">
                 <span class="text-lg font-semibold">tursim</span>
                 <p class="text-sm">
                   A turing machine simulator written to replace Tuatara.
@@ -160,8 +161,8 @@ const posts = Object.values(
                 >
               </td>
             </tr>
-            <tr class="border border-black">
-              <td class="border-r border-black p-2">
+            <tr>
+              <td class="p-2">
                 <span class="text-lg font-semibold">the better handbook</span>
                 <p class="text-sm">
                   An open-source handbook and review platform for Monash
@@ -175,8 +176,8 @@ const posts = Object.values(
                 >
               </td>
             </tr>
-            <tr class="border border-black">
-              <td class="border-r border-black p-2">
+            <tr>
+              <td class="p-2">
                 <span class="text-lg font-semibold">launtsched</span>
                 <p class="text-sm">
                   Change settings of your Launtel service/s through the command
@@ -190,8 +191,8 @@ const posts = Object.values(
                 >
               </td>
             </tr>
-            <tr class="border border-black">
-              <td class="border-r border-black p-2">
+            <tr>
+              <td class="p-2">
                 <span class="text-lg font-semibold">scroom</span>
                 <p class="text-sm">
                   A scrum-based project management tool for agile teams.
@@ -204,8 +205,8 @@ const posts = Object.values(
                 >
               </td>
             </tr>
-            <tr class="border border-black">
-              <td class="border-r border-black p-2">
+            <tr>
+              <td class="p-2">
                 <span class="text-lg font-semibold">cidio</span>
                 <p class="text-sm">
                   Helping university students find subjects that fit them.

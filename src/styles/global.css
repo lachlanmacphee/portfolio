@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import "@fontsource/libre-franklin";
+@plugin '@tailwindcss/typography';
+
+@theme {
+    --font-sans: "Libre Franklin", sans-serif;
+}
+
+th, td {
+  border: 1px solid black;
+}
