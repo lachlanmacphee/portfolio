@@ -18,10 +18,10 @@ This is where all the products and services your business buys and sells will be
 
 Let's go through the available fields to understand what they mean:
 
-- **Item Code**: This is a unique identifier for the item. It can be a SKU, barcode, or any other code that makes sense for your business. Ideally, you should develop a naming standard for your items to make them easier to find and manage. Refer to the [ERPNext Item Codification documentation](https://docs.frappe.io/erpnext/user/manual/en/item-codification) for some handy tips.
+- **Item Code**: This is a unique identifier for the item. It can be a SKU, barcode, or any other code that makes sense for your business. Ideally, you should develop a naming standard for your items to make them easier to find and manage. Refer to [this](https://docs.frappe.io/erpnext/user/manual/en/item-codification) for some handy tips.
 - **Item Group**: This is a category that helps you organise your items. By default, ERPNext comes with some pre-defined item groups such as `Products`, `Consumables`, and `Services` which should fit most use cases. You can create your own item groups if needed.
 - **Default Unit of Measure**: This is the unit in which the item is measured. Common units include `Nos` (numbers), `Kg` (kilograms), `Litre` (litres), etc. For our LED TV, we'll use `Nos`, since we sell them by the unit. Note that the spelling of the unit can sometimes switch between American and British English (e.g. there is `Litre` but also `Meter`).
-- **Maintain Stock**: Tick this box if you want ERPNext to track the stock levels of this item. For physical products, you should tick this box. For services, you can leave it unticked.
+- **Maintain Stock**: Tick this box if you want ERPNext to track the stock levels of this item and create stock ledger entries for each transaction. For physical products, you should tick this box. For services, you would very likely untick it.
 - **Is Fixed Asset**: Tick this box if the item is a fixed asset, such as machinery or equipment that your business uses. For items you sell to customers, leave this box unticked.
 
 Here's an example of how to fill out the form for a new item, in this case, a 50-inch OLED TV that our mock consumer electronics business sells:
@@ -46,7 +46,7 @@ This will take you to the Data Import page. Click the `Add Data Import` button i
 
 ![ERPNext Data Import Form](../../images/erpnext-items-new-data-import.png)
 
-Once you've filled out the form, click the `Save` button in the bottom right corner. This will then change the page layout and give you the option to download a template CSV file. Click the `Download Template` button to open a modal which allows you to select what fields you'd like to include for the items you're importing. Alongside the existing fields pre-ticked by ERPNext, tick the `Maintain Stock` and `Is Fixed Asset` checkboxes to include those fields in the template. We'll come back to some of the other fields later in this blog post. Click the `Export` button at the bottom right to download the template file.
+Once you've filled out the form, click the `Save` button in the bottom right corner. This will then change the page layout and give you the option to download a template CSV file. Click the `Download Template` button to open a modal which allows you to select what fields you'd like to include for the items you're importing. Alongside the existing fields pre-ticked by ERPNext, tick the `Maintain Stock` and `Is Fixed Asset` checkboxes to include those fields in the template. Click the `Export` button at the bottom right to download the template file.
 
 ![ERPNext Data Import Template Modal](../../images/erpnext-items-data-import-template-modal.png)
 
@@ -65,20 +65,27 @@ Head back to the Data Import page in ERPNext and click the `Import File` button 
 
 ![ERPNext Items Page with Imported Items](../../images/erpnext-items-items-page-imported.png)
 
-Now that we've added a sizeable number of items (at least for our mock business!), let's take a look at some of the other fields available when creating or editing an item. Open one of the items by clicking on its name in the items list. This will take you to the item detail page:
+Now that we've added a number of items, let's take a look at some of the other fields available when creating or editing an item. Open one of the items by clicking on its name in the items list. This will take you to the item detail page:
 
 ![ERPNext Item Detail Page](../../images/erpnext-items-item-detail-page.png)
 
 At the top, you'll see several tabs. Let's go through what each of these are for:
 
-Coming soon!!
+- **Details**: This tab contains basic details about the item, such as its name, group, and unit of measure, alongside some more advanced settings. Let's explore what each of these are:
+  - `Disabled`: Reasonably self explanatory. It allows you to control whether or not this product can be used. You might disable a product if it's old but you still have sales orders for it and wish to keep those intact.
+  - `Allow Alternative Item`: Mostly used for manufacturing businesses. It means that this item can be substituted for something else in the manufacturing process.
+  - `Maintain Stock`: Discussed above.
+  - `Has Variants`: For our consumer electronics business, it might be where you have a TV that comes in multiple colours. You would setup a "master" item, and then give each colour its own variant.
+  - `Valuation Rate`: The cost of an item in inventory. Usually based on the price you paid for that item when it was bought.
+  - `Is Fixed Asset`: Discussed above.
+  - `Over Delivery/Receipt Allowance` and `Over Billing Allowance`: Explained [here](https://docs.frappe.io/erpnext/user/manual/en/allow-over-delivery-billing-against-sales-order-upto-certain-limit)
+- **Dashboard**: At the top of this page, you'll see an activity heatmap, indicating the item's stock movements over time. Underneath, there are a variety of shortcuts. Some of the most important ones for our consumer electronics business would be the item price and pricing rules, quotations/sales orders/invoices for selling the item, and supplier quotations/purchase orders for buying it. If your company does any sort of manufacturing, the "Groups" and "Manufacture" sections might be useful to you. The "Traceability" section is useful for items with serial numbers or ones that come in batches.
+- **Inventory**: Set the item's shelf life (0 if it doesn't have one), end of life, warranty period, weight per unit, and other inventory-related settings. You'll also find a barcodes table, which allows you to add multiple barcodes for the item if you use those for tracking. There's an auto re-order section where you can set minimum and maximum stock levels to help manage inventory, and at the bottom of the tab, there's a serial numbers and batches section if you wish to enable that functionality for this item.
+- **Accounting**: Controls for deferred accounting of this item, and item defaults for each company (e.g. which warehouse it sits in and its default price list).
+- **Purchasing**: Purchasing information for the item, such as the default purchase unit of measure, minimum order quantity, safety stock, lead time, and last purchase rate. This information will be used when creating purchase orders. Additionally, there are sections for supplier and foreign trade details.
+- **Sales**: Similar to purchasing, it gives you a default unit of measure except this time for sales. There are also options for the maximum discount that can be provided on the item, whether commission should be granted on a sale, and whether it's allowed to be sold in the first place.
+- **Tax**: Set tax-related information for the item, such as the tax category, when it's valid from, and the min/max net rates.
+- **Quality**: Manage quality inspections and control for the item. You can set quality inspection templates and define whether inspections are required before purchase or delivery.
+- **Manufacturing**: Whether to include the item in manufacturing, and if the item is subcontracted to a vendor, whether your company supplies raw materials for a purchase.
 
-<!-- - **Details**: This tab contains the basic information about the item that we filled out when creating it, such as the item code, item group, and unit of measure. You can also add additional information here, such as a description, item image, and item variants (e.g., different sizes or colors).
-- **Dashboard**: This tab provides an overview of the item's stock levels, recent transactions, and other relevant information. It's a quick way to see how the item is performing in terms of sales and inventory.
-- **Inventory**: This tab is where you can manage the stock levels of the item. You can see the current stock level, reorder level, and reorder quantity. You can also create stock entries to adjust the stock levels manually.
-- **Accounting**: This tab is where you can set the item's valuation method (e.g., FIFO, LIFO, Moving Average) and the default expense and income accounts. This is important for accurate financial reporting.
-- **Purchasing**: This tab allows you to set default purchasing information for the item, such as the preferred supplier and purchase rate. This information will be used when creating purchase orders.
-- **Sales**: This tab allows you to set default sales information for the item, such as the default sales price and tax category. This information will be used when creating sales orders.
-- **Tax**: This tab allows you to set tax-related information for the item, such as the tax category and applicable taxes. This is important for compliance with tax regulations.
-- **Quality**: This tab is used to manage quality inspections and control for the item. You can set quality inspection templates and define quality parameters.
-- **Manufacturing**: This tab is used to manage manufacturing-related information for the item. You can set the item's bill of materials (BOM) and routings if the item is manufactured in-house. -->
+That's all for this blog post. Hopefully you understand items a bit more now! In the next post, we'll explore **Customers & Suppliers**. I'm still writing that post, so please bear with me. It should be done by the end of 2025.
