@@ -60,7 +60,7 @@ Next, we need to point your domain name to the ERP. This is important as it allo
 
 Jump back to the web terminal tab you opened earlier. Now we can start setting up the software on the VPS.
 
-Start off by typing `echo $DOMAIN="electronics.com"` (replace `electronics.com` with your actual domain name) and press Enter. This sets up a variable that we will use in the next commands.
+Start off by typing `echo $DOMAIN="your_domain.com"` (replace `your_domain.com` with your actual domain name) and press Enter. This sets up a variable that we will use in the next commands.
 
 You can confirm it is set correctly by typing `echo $DOMAIN` and pressing Enter. It should print out your domain name.
 
