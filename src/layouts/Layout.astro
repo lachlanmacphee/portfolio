@@ -12,11 +12,33 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Lachlan MacPhee's Website" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta
+      name="description"
+      content="I'm a software engineer on a mission to leave a lasting positive impact on this world through my research, work, and relationships."
+    />
+    <meta name="author" content="Lachlan MacPhee" />
+    <meta name="theme-color" content="#f6eee3" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta
+      property="og:description"
+      content="I'm a software engineer on a mission to leave a lasting positive impact on this world through my research, work, and relationships."
+    />
+    <meta property="og:url" content={Astro.url} />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta
+      name="twitter:description"
+      content="I'm a software engineer on a mission to leave a lasting positive impact on this world through my research, work, and relationships."
+    />
   </head>
   <body class="font-primary h-screen bg-[#f6eee3]">
     <slot />

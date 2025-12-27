@@ -17,7 +17,7 @@ interface Frontmatter {
 const posts = Object.values(
   import.meta.glob<MarkdownInstance<Frontmatter>>("./blog/*.md", {
     eager: true,
-  })
+  }),
 );
 ---
 
@@ -46,8 +46,9 @@ const posts = Object.values(
       <div>
         <h3 class="mb-2 text-3xl font-bold">About Me</h3>
         <p class="mb-4">
-          Hey there! My name's Lachlan. I'm on a mission to leave a lasting
-          positive impact on this world through my work and relationships.
+          Hey there! My name's Lachlan. I'm a software engineer on a mission to
+          leave a lasting positive impact on this world through my work and
+          relationships.
         </p>
         <p class="mb-4">
           I have a keen eye for detail and like to ensure things are done once
@@ -167,11 +168,11 @@ const posts = Object.values(
               <td class="p-2">
                 <a
                   class="text-lg font-semibold underline"
-                  href="https://tbh.lachlanmacphee.com">the better handbook</a
+                  href="https://thebetterhandbook.com.au">the better handbook</a
                 >
                 <p class="text-sm">
-                  An open-source handbook and review platform for Monash
-                  University.
+                  An open-source handbook and review platform for Australian
+                  Universities.
                 </p>
               </td>
               <td class="text-center">
