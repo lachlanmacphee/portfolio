@@ -88,4 +88,4 @@ At the top, you'll see several tabs. Let's go through what each of these are for
 - **Quality**: Manage quality inspections and control for the item. You can set quality inspection templates and define whether inspections are required before purchase or delivery.
 - **Manufacturing**: Whether to include the item in manufacturing, and if the item is subcontracted to a vendor, whether your company supplies raw materials for a purchase.
 
-That's all for this blog post. Hopefully you understand items a bit more now! In the next post, we'll explore **Customers & Suppliers**. I'm still writing that post, so please bear with me. It should be done by the end of 2025.
+That's all for this blog post. Hopefully you understand items a bit more now! In the next post, we'll explore **Customers & Suppliers**. I'm still writing that post, so please bear with me.
