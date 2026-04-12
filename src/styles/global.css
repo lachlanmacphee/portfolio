@@ -3,9 +3,49 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-    --font-sans: "Libre Franklin", sans-serif;
+  --font-sans: "Libre Franklin", sans-serif;
 }
 
-th, td {
+@utility prose {
+  h1 {
+    @apply mb-0 text-3xl font-bold;
+  }
+
+  a {
+    @apply text-olive-950;
+  }
+
+  strong {
+    @apply text-olive-950;
+  }
+
+  code {
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  :not(pre) > code {
+    @apply rounded bg-olive-200 p-1;
+  }
+
+  img {
+    @apply rounded-xl;
+  }
+
+  blockquote {
+    /* Disable adding quote marks to block-quotes: https://github.com/tailwindlabs/tailwindcss-typography/issues/66 */
+    p {
+      &:first-of-type::before,
+      &:last-of-type::after {
+        content: none;
+      }
+    }
+  }
+}
+
+th,
+td {
   border: 1px solid black;
 }

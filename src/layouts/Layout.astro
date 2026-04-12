@@ -6,6 +6,10 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const siteAuthor = "Lachlan MacPhee";
+const siteDescription =
+  "I'm a software engineer on a mission to leave a lasting positive impact on this world through my research, work, and relationships.";
 ---
 
 <!doctype html>
@@ -16,31 +20,22 @@ const { title } = Astro.props;
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <meta
-      name="description"
-      content="I'm a software engineer on a mission to leave a lasting positive impact on this world through my research, work, and relationships."
-    />
-    <meta name="author" content="Lachlan MacPhee" />
-    <meta name="theme-color" content="#f6eee3" />
-    
+    <meta name="description" content={siteDescription} />
+    <meta name="author" content={siteAuthor} />
+    <meta name="theme-color" content="#f4f4f0" />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
-    <meta
-      property="og:description"
-      content="I'm a software engineer on a mission to leave a lasting positive impact on this world through my research, work, and relationships."
-    />
+    <meta property="og:description" content={siteDescription} />
     <meta property="og:url" content={Astro.url} />
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
-    <meta
-      name="twitter:description"
-      content="I'm a software engineer on a mission to leave a lasting positive impact on this world through my research, work, and relationships."
-    />
+    <meta name="twitter:description" content={siteDescription} />
   </head>
-  <body class="font-primary h-screen bg-[#f6eee3]">
+  <body class="font-primary h-screen bg-olive-100">
     <slot />
   </body>
 </html>
