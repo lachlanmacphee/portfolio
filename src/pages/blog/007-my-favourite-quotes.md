@@ -15,3 +15,5 @@ status: "published"
 > "If you want to be a good intuitive Bayesian—if you want to naturally make good predictions, without having to think about what kind of prediction rule is appropriate—you need to protect your priors. Counterintuitively, that might mean turning off the news." - Brian Christian and/or Tom Griffiths, Algorithms to Live By: The Computer Science of Human Decisions
 
 > "Every dependency is a room mate that eats your food and never pays rent." - Dave Plummer, Why the Original Task Manager Was Under 80K and Insanely Fast
+
+> "Don't use N computers when 1 will do." - David Crawshaw, One process programming notes (with Go and SQLite)
